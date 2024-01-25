@@ -4,9 +4,11 @@
 	home-manager.users.jacob = { pkgs, ... }:
 	let 
 		nixvim = import (builtins.fetchGit {
-		url = "https://github.com/nix-community/nixvim";
-		ref = "nixos-23.11";
-	});
+			url = "https://github.com/nix-community/nixvim";
+			ref = "nixos-23.11";
+		});
+
+		unstable = import <unstable> {};
 	in
 	{
 		imports = [
@@ -33,6 +35,9 @@
 			pkgs.rustfmt
 			pkgs.gcc
 			pkgs.ansible
+			pkgs.qbittorrent
+			unstable.wineWowPackages.unstableFull
+			unstable.winetricks
 		];
 
 		programs.home-manager.enable = true;
