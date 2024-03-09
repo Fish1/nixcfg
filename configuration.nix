@@ -64,11 +64,11 @@
   };
 
   environment.systemPackages = with pkgs; [
-    pkgs.vim
-    pkgs.wget
-    pkgs.vscode
-    pkgs.discord
-    pkgs.steam
+		pkgs.vim
+		pkgs.wget
+		pkgs.vscode
+		pkgs.discord
+		pkgs.steam
   ];
 
   programs.fish.enable = true;

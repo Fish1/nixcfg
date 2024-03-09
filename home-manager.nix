@@ -26,18 +26,10 @@
 			pkgs.siril
 			pkgs.lazygit
 			pkgs.lazydocker
-			pkgs.go
-			pkgs.nodejs_18
 			pkgs.lua
-			pkgs.rustc
-			pkgs.cargo
-			pkgs.rust-analyzer
-			pkgs.rustfmt
-			pkgs.gcc
 			pkgs.ansible
-			pkgs.qbittorrent
-			unstable.wineWowPackages.unstableFull
-			unstable.winetricks
+			pkgs.btop
+			pkgs.gh
 		];
 
 		programs.home-manager.enable = true;
@@ -64,11 +56,13 @@
 				neo-tree.enable = true;
 				fidget.enable = true;
 				lsp-format.enable = true;
+				luasnip.enable = true;
 
 				lsp = {
 					enable = true;
 					servers = {
 						lua-ls.enable = true;
+						zls.enable = true;
 						rust-analyzer = {
 							enable = true;
 							onAttach.function = ''
@@ -98,18 +92,38 @@
 						gd = "definition";
 						gi = "implementation";
 						gt = "type_definition";
+						gr = "rename";
 					};
 				};
 
 				nvim-cmp = {
 					enable = true;
 					autoEnableSources = true;
+					snippet.expand = "luasnip";
 
 					sources = [
 						{ name = "nvim_lsp"; }
 						{ name = "path"; }
 						{ name = "buffer"; }
 					];
+
+					mapping = {
+						"<CR>" = "cmp.mapping.confirm({ select = true })";
+						"<S-Tab>" = {
+							action = "cmp.mapping.select_prev_item()";
+							modes = [
+								"i"
+								"s"
+							];
+						};
+						"<Tab>" = {
+							action = "cmp.mapping.select_next_item()";
+							modes = [
+								"i"
+								"s"
+							];
+						};
+					};
 				};
 			};
 		};
