@@ -5,7 +5,8 @@
 	let 
 		nixvim = import (builtins.fetchGit {
 			url = "https://github.com/nix-community/nixvim";
-			ref = "nixos-23.11";
+			ref = "main";
+			# ref = "nixos-23.11";
 		});
 
 		unstable = import <unstable> {};
@@ -18,12 +19,7 @@
 		home.packages = [
 			pkgs.firefox
 			pkgs.inkscape
-			# pkgs.indi-full
-			# pkgs.indilib
-			pkgs.kstars
-			pkgs.libsForQt5.breeze-icons
 			pkgs.gimp
-			pkgs.siril
 			pkgs.lazygit
 			pkgs.lazydocker
 			pkgs.lua
@@ -65,6 +61,8 @@
 						zls.enable = true;
 						rust-analyzer = {
 							enable = true;
+							installRustc = false;
+							installCargo = false;
 							onAttach.function = ''
 								require("lsp-format").on_attach(client, bufnr)
 							'';

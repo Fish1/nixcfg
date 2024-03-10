@@ -63,7 +63,7 @@
     shell = pkgs.fish;
   };
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
 		pkgs.vim
 		pkgs.wget
 		pkgs.vscode
