@@ -6,10 +6,7 @@
 		nixvim = import (builtins.fetchGit {
 			url = "https://github.com/nix-community/nixvim";
 			ref = "main";
-			# ref = "nixos-23.11";
 		});
-
-		unstable = import <unstable> {};
 	in
 	{
 		imports = [
@@ -41,10 +38,6 @@
 				shiftwidth = 2;
 			};
 
-			extraPlugins = with pkgs.vimPlugins; [
-				lazygit-nvim
-			];
-
 			plugins = {
 				lualine.enable = true;
 				bufferline.enable = true;
@@ -59,6 +52,8 @@
 					servers = {
 						lua-ls.enable = true;
 						zls.enable = true;
+						gleam.enable = true;
+						ols.enable = true;
 						rust-analyzer = {
 							enable = true;
 							installRustc = false;
@@ -94,32 +89,29 @@
 					};
 				};
 
-				nvim-cmp = {
+				cmp = {
 					enable = true;
 					autoEnableSources = true;
-					snippet.expand = "luasnip";
-
-					sources = [
-						{ name = "nvim_lsp"; }
-						{ name = "path"; }
-						{ name = "buffer"; }
-					];
-
-					mapping = {
-						"<CR>" = "cmp.mapping.confirm({ select = true })";
-						"<S-Tab>" = {
-							action = "cmp.mapping.select_prev_item()";
-							modes = [
-								"i"
-								"s"
-							];
-						};
-						"<Tab>" = {
-							action = "cmp.mapping.select_next_item()";
-							modes = [
-								"i"
-								"s"
-							];
+					settings = {
+						snippet.expand = ''
+							function(args)
+								require('luasnip').lsp_expand(args.body)
+							end
+						'';
+						sources = [
+							{ name = "nvim_lsp"; }
+							{ name = "luasnip"; }
+							{ name = "path"; }
+							{ name = "buffer"; }
+						];
+						mapping = {
+							"<C-Space>" = "cmp.mapping.complete()";
+							"<C-d>" = "cmp.mapping.scroll_docs(-4)";
+							"<C-e>" = "cmp.mapping.close()";
+							"<C-f>" = "cmp.mapping.scroll_docs(4)";
+							"<CR>" = "cmp.mapping.confirm({ select = true })";
+							"<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+							"<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
 						};
 					};
 				};
@@ -148,6 +140,6 @@
 			terminal = "tmux-256color";
 		};
 
-		home.stateVersion = "23.11";
+		home.stateVersion = "24.05";
 	};
 }
