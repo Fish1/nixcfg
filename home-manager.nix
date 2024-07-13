@@ -9,8 +9,6 @@
 
 		users.jacob = { pkgs, nixvim, ... }: {
 
-			pkgs.config.allowUnfree = true;
-
 			imports = [
 				nixvim.homeManagerModules.nixvim
 			];
