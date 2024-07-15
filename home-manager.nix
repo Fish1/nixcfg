@@ -3,11 +3,15 @@
 {
 	home-manager = {
 
+		
+
 		extraSpecialArgs = {
 			inherit home-manager nixvim;
 		};
 
 		users.jacob = { pkgs, nixvim, ... }: {
+			
+			nixpkgs.config.allowUnfree = true;
 
 			imports = [
 				nixvim.homeManagerModules.nixvim
