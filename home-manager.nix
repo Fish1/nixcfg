@@ -3,8 +3,6 @@
 {
 	home-manager = {
 
-		
-
 		extraSpecialArgs = {
 			inherit home-manager nixvim;
 		};
@@ -44,6 +42,7 @@
 					list = true;
 					tabstop = 2;
 					shiftwidth = 2;
+					foldmethod = "manual";
 				};
 
 				keymaps = [
