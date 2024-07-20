@@ -11,6 +11,7 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.kernelModules = [ "amdgpu" ];
+	boot.extraModprobeConfig = "options hid_apple fnmode=1";
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
