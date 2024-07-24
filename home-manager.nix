@@ -55,13 +55,21 @@
 				plugins = {
 					lualine.enable = true;
 					bufferline.enable = true;
-					treesitter.enable = true;
 					neo-tree.enable = true;
 					fidget.enable = true;
 					lsp-format.enable = true;
 					luasnip.enable = true;
 					trouble.enable = true;
 					telescope.enable = true;
+
+					treesitter = {
+						enable = true;
+						settings = {
+							auto_install = true;
+							ensure_installed = "all";
+							highlight.enable = true;
+						};
+					};
 
 					lsp = {
 						enable = true;
