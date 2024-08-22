@@ -17,7 +17,6 @@
 
 			home.packages = [
 				pkgs.firefox
-				pkgs.opera
 				pkgs.inkscape
 				pkgs.gimp
 				pkgs.lazygit
