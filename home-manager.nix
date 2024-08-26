@@ -28,6 +28,7 @@
 				pkgs.sshpass
 				pkgs.lm_sensors
 				pkgs.gamescope
+				pkgs.premid
 			];
 
 			programs.home-manager.enable = true;
