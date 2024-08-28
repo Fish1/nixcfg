@@ -28,7 +28,7 @@
 				pkgs.sshpass
 				pkgs.lm_sensors
 				pkgs.gamescope
-				pkgs.premid
+				pkgs.android-studio
 			];
 
 			programs.home-manager.enable = true;
