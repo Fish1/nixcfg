@@ -28,7 +28,7 @@
 				pkgs.sshpass
 				pkgs.lm_sensors
 				pkgs.gamescope
-				pkgs.android-studio
+				pkgs.rPackages.etree
 			];
 
 			programs.home-manager.enable = true;
