@@ -28,7 +28,7 @@
 				pkgs.sshpass
 				pkgs.lm_sensors
 				pkgs.gamescope
-				pkgs.python311Packages.lxml
+				pkgs.ngrok
 			];
 
 			programs.home-manager.enable = true;
