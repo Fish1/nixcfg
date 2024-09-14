@@ -29,6 +29,7 @@
 				pkgs.lm_sensors
 				pkgs.gamescope
 				pkgs.ngrok
+				pkgs.telegram-desktop
 			];
 
 			programs.home-manager.enable = true;
