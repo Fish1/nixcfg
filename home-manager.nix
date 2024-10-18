@@ -30,6 +30,7 @@
 				pkgs.gamescope
 				pkgs.ngrok
 				pkgs.telegram-desktop
+				pkgs.android-studio
 			];
 
 			programs.home-manager.enable = true;
