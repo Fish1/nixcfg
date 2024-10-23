@@ -101,7 +101,10 @@
 							};
 							tsserver.enable = true;
 							tailwindcss.enable = true;
-							html.enable = true;
+							html = {
+								enable = true;
+								filetypes = ["html"];
+							};
 							svelte = {
 								enable = true;
 								onAttach.function = ''
