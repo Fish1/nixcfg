@@ -30,7 +30,6 @@
 				pkgs.gamescope
 				pkgs.ngrok
 				pkgs.telegram-desktop
-				pkgs.android-studio
 			];
 
 			programs.home-manager.enable = true;
@@ -89,6 +88,12 @@
 								'';
 							};
 							gopls = {
+								enable = true;
+								onAttach.function = ''
+									require("lsp-format").on_attach(client, bufnr)
+								'';
+							};
+							templ = {
 								enable = true;
 								onAttach.function = ''
 									require("lsp-format").on_attach(client, bufnr)
