@@ -74,12 +74,12 @@
 					lsp = {
 						enable = true;
 						servers = {
-							lua-ls.enable = true;
+							lua_ls.enable = true;
 							terraformls.enable = true;
 							zls.enable = true;
 							gleam.enable = true;
 							ols.enable = true;
-							rust-analyzer = {
+							rust_analyzer = {
 								enable = true;
 								installRustc = false;
 								installCargo = false;
@@ -99,7 +99,7 @@
 									require("lsp-format").on_attach(client, bufnr)
 								'';
 							};
-							ts-ls.enable = true;
+							ts_ls.enable = true;
 							tailwindcss.enable = true;
 							html = {
 								enable = true;
@@ -170,7 +170,7 @@
 
 			programs.kitty = {
 				enable = true;
-				themeFile = "Tokyo Night";
+				themeFile = "tokyo_night_night";
 				settings = {
 					font_family = "JetBrainsMono NFM";
 					wayland_titlebar_color = "#000000";
