@@ -80,7 +80,7 @@
 	programs.steam.gamescopeSession.enable = true;
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+		nerd-fonts.jet-brains-mono
   ];
 
   services.flatpak.enable = true;
