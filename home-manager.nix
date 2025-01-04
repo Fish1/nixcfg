@@ -99,7 +99,7 @@
 									require("lsp-format").on_attach(client, bufnr)
 								'';
 							};
-							tsserver.enable = true;
+							ts-ls.enable = true;
 							tailwindcss.enable = true;
 							html = {
 								enable = true;
@@ -170,7 +170,7 @@
 
 			programs.kitty = {
 				enable = true;
-				theme = "Tokyo Night";
+				themeFile = "Tokyo Night";
 				settings = {
 					font_family = "JetBrainsMono NFM";
 					wayland_titlebar_color = "#000000";
