@@ -34,15 +34,22 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
-  hardware.graphics.enable = true;
+	hardware = {
+		graphics = {
+			enable = true;
+			enable32Bit = true;
+		};
+		amdgpu.amdvlk = {
+			enable = true;
+			support32Bit = true;
+		};
+	};
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
   services.printing.enable = true;
-
-  # sound.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -66,7 +73,6 @@
 		pkgs.wget
 		pkgs.vscode
 		pkgs.discord
-		pkgs.steam
 		pkgs.protontricks
 		pkgs.winetricks
 		pkgs.wineWowPackages.unstableFull
@@ -74,10 +80,12 @@
 
   programs.fish.enable = true;
 
-  programs.steam.enable = true;
-  programs.steam.remotePlay.openFirewall = true;
-  programs.steam.dedicatedServer.openFirewall = true;
-	programs.steam.gamescopeSession.enable = true;
+	programs.steam = {
+		enable = true;
+		remotePlay.openFirewall = true;
+		dedicatedServer.openFirewall = true;
+		gamescopeSession.enable = true;
+	};
 
   fonts.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono
