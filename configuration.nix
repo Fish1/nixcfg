@@ -41,7 +41,7 @@
 		};
 		amdgpu.amdvlk = {
 			enable = true;
-			support32Bit = true;
+			support32Bit.enable = true;
 		};
 	};
   services.xserver.xkb = {
