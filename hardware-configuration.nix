@@ -1,1 +1,0 @@
-./hosts/laptop/hardware-configuration.nix

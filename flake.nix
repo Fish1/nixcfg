@@ -12,14 +12,28 @@
 	};
 
 	outputs = { self, nixpkgs, home-manager, nixvim } @attrs : {
-		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
-			specialArgs = attrs;
-			modules = [
-				./configuration.nix
-				home-manager.nixosModules.home-manager
-				nixvim.nixosModules.nixvim
-			];
+		nixosConfigurations = {
+
+			jacob-laptop = nixpkgs.lib.nixosSystem {
+				system = "x86_64-linux";
+				specialArgs = attrs;
+				modules = [
+					./hosts/jacob-laptop/configuration.nix
+					home-manager.nixosModules.home-manager
+					nixvim.nixosModules.nixvim
+				];
+			};
+
+			jacob-desktop = nixpkgs.lib.nixosSystem {
+				system = "x86_64-linux";
+				specialArgs = attrs;
+				modules = [
+					./hosts/jacob-desktop/configuration.nix
+					home-manager.nixosModules.home-manager
+					nixvim.nixosModules.nixvim
+				];
+			};
+
 		};
 	};
 }
