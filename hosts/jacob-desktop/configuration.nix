@@ -13,7 +13,7 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
 	boot.extraModprobeConfig = "options hid_apple fnmode=1";
 
-  networking.hostName = "nixos";
+  networking.hostName = "jacob-desktop";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
