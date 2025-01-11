@@ -13,7 +13,7 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
 	boot.extraModprobeConfig = "options hid_apple fnmode=1";
 
-  networking.hostName = "nixos";
+  networking.hostName = "jacob-laptop";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -71,21 +71,9 @@
   environment.systemPackages = [
 		pkgs.vim
 		pkgs.wget
-		pkgs.vscode
-		pkgs.discord
-		pkgs.protontricks
-		pkgs.winetricks
-		pkgs.wineWowPackages.unstableFull
   ];
 
   programs.fish.enable = true;
-
-	programs.steam = {
-		enable = true;
-		remotePlay.openFirewall = true;
-		dedicatedServer.openFirewall = true;
-		gamescopeSession.enable = true;
-	};
 
   fonts.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono
