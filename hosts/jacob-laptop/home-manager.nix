@@ -1,4 +1,4 @@
-{ config, pkgs, home-manager, nixvim, ... } :
+{ pkgs, home-manager, nixvim, ... } :
 
 {
 	home-manager = {
@@ -26,6 +26,7 @@
 				pkgs.gh
 				pkgs.lm_sensors
 				pkgs.discord
+				pkgs.vim
 			];
 
 			programs.home-manager.enable = true;
