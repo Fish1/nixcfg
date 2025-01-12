@@ -21,20 +21,11 @@
 
 			home.packages = [
 				pkgs.firefox
-				pkgs.inkscape
-				pkgs.gimp
-				pkgs.lazygit
-				pkgs.lazydocker
 				pkgs.lua
-				pkgs.ansible
 				pkgs.btop
 				pkgs.gh
-				pkgs.sshpass
 				pkgs.lm_sensors
-				pkgs.gamescope
-				pkgs.ngrok
-				pkgs.telegram-desktop
-				pkgs.mangohud
+				pkgs.discord
 			];
 
 			programs.home-manager.enable = true;
