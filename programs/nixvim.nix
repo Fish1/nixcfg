@@ -41,6 +41,7 @@
 			lsp = {
 				enable = true;
 				servers = {
+					nixd.enable = true;
 					lua_ls.enable = true;
 					terraformls.enable = true;
 					zls.enable = true;

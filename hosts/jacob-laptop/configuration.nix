@@ -1,5 +1,4 @@
-{ config, pkgs, home-manager, nixvim, ... }:
-
+{ ... }:
 {
   imports = [
 		./hardware-configuration.nix

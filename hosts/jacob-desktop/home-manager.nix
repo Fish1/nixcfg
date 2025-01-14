@@ -1,4 +1,4 @@
-{ pkgs, home-manager, nixvim, ... } :
+{ home-manager, nixvim, ... } :
 {
 	home-manager = {
 
