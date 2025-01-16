@@ -42,6 +42,7 @@
 				enable = true;
 				servers = {
 					nixd.enable = true;
+					clangd.enable = true;
 					lua_ls.enable = true;
 					terraformls.enable = true;
 					zls.enable = true;
