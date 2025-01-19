@@ -48,6 +48,7 @@
 					zls.enable = true;
 					gleam.enable = true;
 					ols.enable = true;
+					pyright.enable = true;
 					rust_analyzer = {
 						enable = true;
 						installRustc = false;
