@@ -9,6 +9,15 @@
 		../../users/jacob.nix
 	];
 
+	nix.optimise = {
+		automatic = true;
+	};
+
+	nix.gc = {
+		automatic = true;
+		options = "--delete-older-than 30d";
+	};
+
 	nixpkgs.config.allowUnfree = true;
 
   networking.hostName = "jacob-desktop";
