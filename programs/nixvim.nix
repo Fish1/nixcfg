@@ -29,6 +29,7 @@
 			trouble.enable = true;
 			telescope.enable = true;
 			web-devicons.enable = true;
+			hex.enable = true;
 
 			treesitter = {
 				enable = true;
