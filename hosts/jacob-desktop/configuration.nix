@@ -9,6 +9,8 @@
 		../../users/jacob.nix
 	];
 
+	boot.extraModprobeConfig = "options hid_apple fnmode=1";
+
 	nix.optimise = {
 		automatic = true;
 	};
