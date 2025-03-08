@@ -15,6 +15,7 @@
 				../../programs/nixvim.nix
 				../../programs/git.nix
 				../../programs/kitty.nix
+				../../programs/librewolf.nix
 				nixvim.homeManagerModules.nixvim
 			];
 
