@@ -4,6 +4,7 @@
 		../../common.nix
 		./hardware-configuration.nix
 		./home-manager.nix
+		../../desktop/wayland/wayland.nix
 		../../programs/steam.nix
 		../../programs/fish.nix
 		../../users/jacob.nix
