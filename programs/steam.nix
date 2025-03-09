@@ -5,5 +5,6 @@
 		remotePlay.openFirewall = true;
 		dedicatedServer.openFirewall = true;
 		gamescopeSession.enable = true;
+		protontricks.enable = true;
 	};
 }
