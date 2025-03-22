@@ -36,6 +36,7 @@
 				pkgs.mangohud
 				pkgs.vim
 				pkgs.wget
+				pkgs.obsidian
 				pkgs.discord
 			];
 

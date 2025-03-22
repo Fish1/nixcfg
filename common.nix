@@ -4,6 +4,7 @@
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.grub.efiSupport = true;
 	boot.loader.efi.canTouchEfiVariables = true;
+	boot.kernelPackages = pkgs.linuxPackages_latest;
 	boot.initrd.kernelModules = [ "amdgpu" ];
 
 	# locale
