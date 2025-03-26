@@ -7,6 +7,8 @@
 		../../users/jacob.nix
 		../../common.nix
 	];
+  
+	virtualisation.docker.enable = true;
 
   networking.hostName = "jacob-laptop";
 
