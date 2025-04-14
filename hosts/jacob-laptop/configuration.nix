@@ -8,6 +8,7 @@
 		../../common.nix
 	];
   
+  services.flatpak.enable = true;
 	virtualisation.docker.enable = true;
 
   networking.hostName = "jacob-laptop";
