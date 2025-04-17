@@ -71,6 +71,7 @@
 						'';
 					};
 					ts_ls.enable = true;
+					eslint.enable = true;
 					tailwindcss.enable = true;
 					html = {
 						enable = true;
