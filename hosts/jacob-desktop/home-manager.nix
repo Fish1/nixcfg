@@ -22,7 +22,7 @@
 			home.packages = [
 				pkgs.firefox
 				pkgs.inkscape
-				pkgs.gimp
+				pkgs.gimp3
 				pkgs.lazygit
 				pkgs.lazydocker
 				pkgs.lua
