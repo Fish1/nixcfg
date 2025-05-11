@@ -38,6 +38,7 @@
 				pkgs.wget
 				pkgs.obsidian
 				pkgs.discord
+				pkgs.vscode
 			];
 
 			programs.home-manager.enable = true;
