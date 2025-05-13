@@ -39,6 +39,7 @@
 				pkgs.obsidian
 				pkgs.discord
 				pkgs.vscode
+				pkgs.ruby
 			];
 
 			programs.home-manager.enable = true;
