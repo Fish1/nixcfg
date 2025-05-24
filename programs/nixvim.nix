@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
 	programs.nixvim = {
 		enable = true;
@@ -18,6 +18,22 @@
 				key = "<Leader>db";
 			}
 		];
+
+		extraPlugins = [(
+			pkgs.vimUtils.buildVimPlugin {
+				name = "love2d";
+				src = pkgs.fetchFromGitHub {
+					owner = "S1M0N38";
+					repo = "love2d.nvim";
+					rev = "a290eae5170246d71cd26dde76a1c0efeb4bd2fb";
+					hash = "sha256-8sLDGW2hyyfCk4IaN+s5vsHSlRsKKl1XsFE7I/zFRmU=";
+				};
+			}
+		)];
+
+		extraConfigLuaPost = ''
+			require('love2d').setup({})
+		'';
 
 		plugins = {
 			lualine.enable = true;
@@ -44,7 +60,6 @@
 				servers = {
 					nixd.enable = true;
 					clangd.enable = true;
-					lua_ls.enable = true;
 					terraformls.enable = true;
 					zls.enable = true;
 					gleam.enable = true;
@@ -82,6 +97,9 @@
 						onAttach.function = ''
 							require("lsp-format").on_attach(client, bufnr)
 						'';
+					};
+					lua_ls = {
+						enable = true;
 					};
 				};
 
