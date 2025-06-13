@@ -40,6 +40,7 @@
 				pkgs.discord
 				pkgs.vscode
 				pkgs.ruby
+				pkgs.nordpass
 			];
 
 			programs.home-manager.enable = true;
