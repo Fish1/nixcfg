@@ -41,6 +41,8 @@
 				pkgs.vscode
 				pkgs.ruby
 				pkgs.nordpass
+				pkgs.prismlauncher
+				pkgs.minecraft-server
 			];
 
 			programs.home-manager.enable = true;
