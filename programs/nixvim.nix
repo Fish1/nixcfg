@@ -41,6 +41,7 @@
 			neo-tree.enable = true;
 			fidget.enable = true;
 			lsp-format.enable = true;
+			lspconfig.enable = true;
 			luasnip.enable = true;
 			trouble.enable = true;
 			telescope.enable = true;
