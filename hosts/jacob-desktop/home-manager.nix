@@ -16,33 +16,43 @@
 				../../programs/git.nix
 				../../programs/kitty.nix
 				../../programs/librewolf.nix
+				../../programs/direnv.nix
 				nixvim.homeManagerModules.nixvim
 			];
 
 			home.packages = [
-				pkgs.firefox
-				pkgs.inkscape
-				pkgs.gimp3
+				# utilities
+				pkgs.wget
+				pkgs.usbutils
+				pkgs.btop
+				pkgs.nordpass
+				# pkgs.qemu
+
+				# programming
 				pkgs.lazygit
 				pkgs.lazydocker
+				pkgs.vscode
+				pkgs.vim
+				pkgs.gh
 				pkgs.lua
 				pkgs.ansible
-				pkgs.btop
-				pkgs.gh
 				pkgs.sshpass
+				
+				# communications
+				pkgs.firefox
+				pkgs.discord
+				pkgs.telegram-desktop
+
+				# games
 				pkgs.lm_sensors
 				pkgs.gamescope
-				pkgs.telegram-desktop
 				pkgs.mangohud
-				pkgs.vim
-				pkgs.wget
-				pkgs.obsidian
-				pkgs.discord
-				pkgs.vscode
-				pkgs.ruby
-				pkgs.nordpass
 				pkgs.prismlauncher
-				pkgs.minecraft-server
+
+				# art
+				pkgs.inkscape
+				pkgs.gimp3
+				pkgs.obsidian
 			];
 
 			programs.home-manager.enable = true;

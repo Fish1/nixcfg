@@ -30,7 +30,19 @@
   };
 
   services.flatpak.enable = true;
+	services.fwupd.enable = true;
+
   virtualisation.docker.enable = true;
+
+	virtualisation.virtualbox = {
+		host.enable = true;
+		host.enableKvm = true;
+		host.addNetworkInterface = false;
+		host.enableExtensionPack = true;
+		guest.enable = true;
+		guest.dragAndDrop = true;
+	};
+	users.extraGroups.vboxusers.members = [ "jacob" ];
 
   system.stateVersion = "23.11";
 }
