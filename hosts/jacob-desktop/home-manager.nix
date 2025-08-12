@@ -15,7 +15,6 @@
 				../../programs/nixvim.nix
 				../../programs/git.nix
 				../../programs/kitty.nix
-				../../programs/librewolf.nix
 				../../programs/direnv.nix
 				nixvim.homeManagerModules.nixvim
 			];
@@ -26,7 +25,6 @@
 				pkgs.usbutils
 				pkgs.btop
 				pkgs.nordpass
-				# pkgs.qemu
 
 				# programming
 				pkgs.lazygit
