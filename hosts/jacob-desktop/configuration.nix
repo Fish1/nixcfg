@@ -34,15 +34,15 @@
 
   virtualisation.docker.enable = true;
 
-	virtualisation.virtualbox = {
-		host.enable = true;
-		host.enableKvm = true;
-		host.addNetworkInterface = false;
-		host.enableExtensionPack = true;
-		guest.enable = true;
-		guest.dragAndDrop = true;
-	};
-	users.extraGroups.vboxusers.members = [ "jacob" ];
+	# virtualisation.virtualbox = {
+	#	host.enable = true;
+	#	host.enableKvm = true;
+	#	host.addNetworkInterface = false;
+	#	host.enableExtensionPack = true;
+	#	guest.enable = true;
+	#	guest.dragAndDrop = true;
+	#};
+	#users.extraGroups.vboxusers.members = [ "jacob" ];
 
   system.stateVersion = "23.11";
 }
