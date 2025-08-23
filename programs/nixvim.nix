@@ -86,12 +86,7 @@
 							require("lsp-format").on_attach(client, bufnr)
 						'';
 					};
-					ts_ls = {
-						enable = true;
-						onAttach.function = ''
-							require("lsp-format").on_attach(client, bufnr)
-						'';
-					};
+					ts_ls.enable = true;
 					eslint.enable = true;
 					tailwindcss.enable = true;
 					html = {
