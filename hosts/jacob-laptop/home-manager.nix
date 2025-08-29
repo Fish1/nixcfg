@@ -20,13 +20,11 @@
 			];
 
 			home.packages = [
-				pkgs.firefox
 				pkgs.lua
 				pkgs.btop
 				pkgs.gh
-				pkgs.lm_sensors
-				pkgs.discord
 				pkgs.vim
+				pkgs.vscode
 			];
 
 			programs.home-manager.enable = true;

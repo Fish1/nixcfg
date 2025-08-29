@@ -9,6 +9,8 @@
 	];
   
   services.flatpak.enable = true;
+	services.spice-webdavd.enable = true;
+
 	virtualisation.docker.enable = true;
 
   networking.hostName = "jacob-laptop";
