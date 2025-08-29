@@ -31,6 +31,7 @@
 
   services.flatpak.enable = true;
 	services.fwupd.enable = true;
+	services.spice-webdavd.enable = true;
 
   virtualisation.docker.enable = true;
 
