@@ -22,9 +22,7 @@
 			home.packages = [
 				# utilities
 				pkgs.wget
-				pkgs.usbutils
 				pkgs.btop
-				pkgs.nordpass
 
 				# programming
 				pkgs.lazygit
