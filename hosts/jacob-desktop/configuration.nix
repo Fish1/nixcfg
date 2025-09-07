@@ -6,6 +6,7 @@
 		./home-manager.nix
 		../../programs/steam.nix
 		../../programs/fish.nix
+		../../programs/appimage.nix
 		../../users/jacob.nix
 	];
 
