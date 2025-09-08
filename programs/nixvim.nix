@@ -62,10 +62,14 @@
 					nixd.enable = true;
 					clangd.enable = true;
 					terraformls.enable = true;
-					zls.enable = true;
 					gleam.enable = true;
 					ols.enable = true;
 					pyright.enable = true;
+					zls = {
+						enable = true;
+						packageFallback = true;
+						# package = nixpkgs-ddogfoodd.legacyPackages.${"x86_64-linux"}.zls;
+					};
 					rust_analyzer = {
 						enable = true;
 						installRustc = false;
