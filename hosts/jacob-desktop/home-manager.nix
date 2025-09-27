@@ -33,9 +33,10 @@
 				pkgs.lua
 				pkgs.ansible
 				pkgs.sshpass
-				
+
 				# communications
 				pkgs.firefox
+				pkgs.brave
 				pkgs.discord
 				pkgs.telegram-desktop
 
@@ -46,6 +47,7 @@
 				pkgs.prismlauncher
 				pkgs.nexusmods-app-unfree
 				pkgs.dolphin-emu
+				pkgs.godot
 
 				# art
 				pkgs.inkscape
