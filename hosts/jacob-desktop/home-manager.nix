@@ -46,8 +46,6 @@
 				pkgs.mangohud
 				pkgs.prismlauncher
 				pkgs.nexusmods-app-unfree
-				pkgs.dolphin-emu
-				pkgs.godot
 
 				# art
 				pkgs.inkscape

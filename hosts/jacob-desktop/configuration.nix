@@ -32,9 +32,6 @@
 
   services.flatpak.enable = true;
 	services.fwupd.enable = true;
-	services.openssh = {
-		enable = true;
-	};
 
   virtualisation.docker.enable = true;
 
