@@ -16,7 +16,8 @@
 				../../programs/git.nix
 				../../programs/kitty.nix
 				../../programs/direnv.nix
-				nixvim.homeManagerModules.nixvim
+				../../programs/ghostty.nix
+				nixvim.homeModules.nixvim
 			];
 
 			home.packages = [
