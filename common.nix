@@ -12,10 +12,8 @@
 	i18n.defaultLocale = "en_US.UTF-8";
 
 	# graphics
-	services.xserver.enable = true;
-	services.xserver.displayManager.gdm.enable = true;
-	services.xserver.desktopManager.gnome.enable = true;
-	services.xserver.videoDrivers = [ "amdgpu" ];
+	services.displayManager.gdm.enable = true;
+	services.desktopManager.gnome.enable = true;
 	hardware = {
 		graphics = {
 			enable = true;
