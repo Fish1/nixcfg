@@ -16,6 +16,7 @@
 				../../programs/git.nix
 				../../programs/kitty.nix
 				../../programs/direnv.nix
+				../../programs/ghostty.nix
 				nixvim.homeModules.nixvim
 			];
 
