@@ -38,6 +38,7 @@
 				# communications
 				pkgs.firefox
 				pkgs.brave
+				pkgs.kdePackages.falkon
 				pkgs.discord
 				pkgs.telegram-desktop
 

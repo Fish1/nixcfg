@@ -12,7 +12,9 @@
 	i18n.defaultLocale = "en_US.UTF-8";
 
 	# graphics
-	services.displayManager.gdm.enable = true;
+	services.displayManager.sddm.enable = true;
+	services.displayManager.sddm.wayland.enable = true;
+	services.desktopManager.plasma6.enable = true;
 	services.desktopManager.gnome.enable = true;
 	hardware = {
 		graphics = {
