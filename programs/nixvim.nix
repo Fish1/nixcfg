@@ -71,11 +71,12 @@
 					};
 					rust_analyzer = {
 						enable = true;
-						installRustc = false;
-						installCargo = false;
-						onAttach.function = ''
-							require("lsp-format").on_attach(client, bufnr)
-						'';
+						packageFallback = true;
+						# installRustc = false;
+						# installCargo = false;
+						# onAttach.function = ''
+						#	require("lsp-format").on_attach(client, bufnr)
+						#'';
 					};
 					gopls = {
 						enable = true;
