@@ -39,7 +39,7 @@
 				pkgs.firefox
 				pkgs.brave
 				pkgs.kdePackages.falkon
-				pkgs.discord
+				pkgs.discord-canary
 				pkgs.telegram-desktop
 
 				# games
