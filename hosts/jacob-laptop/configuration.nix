@@ -11,6 +11,11 @@
   services.flatpak.enable = true;
 
 	virtualisation.docker.enable = true;
+	
+	nix.gc = {
+		automatic = true;
+		options = "--delete-older-than 30d";
+	};
 
   networking.hostName = "jacob-laptop";
 
