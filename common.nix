@@ -1,11 +1,15 @@
 { pkgs, ... }:
 {
 	# bootloader
-	boot.loader.systemd-boot.enable = true;
 	boot.loader.grub.efiSupport = true;
 	boot.loader.efi.canTouchEfiVariables = true;
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 	boot.initrd.kernelModules = [ "amdgpu" ];
+
+	boot.loader.systemd-boot = {
+		enable = true;
+		memtest86.enable = true;
+	};
 
 	# locale
 	time.timeZone = "America/New_York";
