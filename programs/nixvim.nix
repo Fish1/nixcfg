@@ -22,6 +22,14 @@
 				action = "<cmd>Telescope find_files<CR>";
 				key = "<Leader>ff";
 			}
+			{
+				action = "<cmd>Telescope buffers<CR>";
+				key = "<Leader>fb";
+			}
+			{
+				action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
+				key = "<Leader>fz";
+			}
 		];
 
 		#extraPlugins = [(
