@@ -3,6 +3,7 @@
 	programs.nixvim = {
 		enable = true;
 		colorschemes.tokyonight.enable = true;
+		globals.mapleader = " ";
 		opts = {
 			number = true;
 			relativenumber = true;
@@ -16,6 +17,10 @@
 			{
 				action = "<cmd>DapToggleBreakpoint<CR>";
 				key = "<Leader>db";
+			}
+			{
+				action = "<cmd>Telescope find_files<CR>";
+				key = "<Leader>ff";
 			}
 		];
 
@@ -38,14 +43,17 @@
 		plugins = {
 			lualine.enable = true;
 			bufferline.enable = true;
-			neo-tree.enable = true;
+			telescope.enable = true;
 			fidget.enable = true;
 			lsp-format.enable = true;
 			luasnip.enable = true;
 			trouble.enable = true;
-			telescope.enable = true;
 			web-devicons.enable = true;
 			hex.enable = true;
+
+			neo-tree = {
+				enable = false;
+			};
 
 			treesitter = {
 				enable = true;
