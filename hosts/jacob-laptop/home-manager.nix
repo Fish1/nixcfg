@@ -11,21 +11,21 @@
 			nixpkgs.config.allowUnfree = true;
 
 			imports = [
+				nixvim.homeModules.nixvim
 				../../programs/tmux.nix
+				../../programs/vim.nix
+				../../programs/vscode.nix
+				../../programs/btop.nix
 				../../programs/nixvim.nix
 				../../programs/git.nix
 				../../programs/kitty.nix
 				../../programs/direnv.nix
 				../../programs/ghostty.nix
-				nixvim.homeModules.nixvim
+				../../programs/gh.nix
 			];
 
 			home.packages = [
 				pkgs.lua
-				pkgs.btop
-				pkgs.gh
-				pkgs.vim
-				pkgs.vscode
 			];
 
 			programs.home-manager.enable = true;

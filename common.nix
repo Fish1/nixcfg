@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+	nix.settings = {
+		download-buffer-size = 524288000;
+	};
+
 	# bootloader
 	boot.loader.grub.efiSupport = true;
 	boot.loader.efi.canTouchEfiVariables = true;
@@ -16,9 +20,6 @@
 	i18n.defaultLocale = "en_US.UTF-8";
 
 	# graphics
-	services.displayManager.sddm.enable = true;
-	services.displayManager.sddm.wayland.enable = true;
-	services.desktopManager.plasma6.enable = true;
 	hardware = {
 		graphics = {
 			enable = true;

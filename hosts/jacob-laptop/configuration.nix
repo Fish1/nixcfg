@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
 		./hardware-configuration.nix
@@ -7,8 +7,11 @@
 		../../users/jacob.nix
 		../../common.nix
 	];
-  
+
   services.flatpak.enable = true;
+	services.displayManager.sddm.enable = true;
+	services.displayManager.sddm.wayland.enable = true;
+	services.desktopManager.plasma6.enable = true;
 
 	virtualisation.docker.enable = true;
 	

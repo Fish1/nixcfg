@@ -11,6 +11,10 @@
 	];
 
 	boot.extraModprobeConfig = "options hid_apple fnmode=1";
+	
+	services.displayManager.sddm.enable = true;
+	services.displayManager.sddm.wayland.enable = true;
+	services.desktopManager.plasma6.enable = true;
 
 	nix.optimise = {
 		automatic = true;
