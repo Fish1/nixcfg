@@ -26,6 +26,7 @@
 
 			home.packages = [
 				pkgs.lua
+				pkgs.kstars
 			];
 
 			programs.home-manager.enable = true;
