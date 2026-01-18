@@ -12,6 +12,7 @@
 
 			imports = [
 				nixvim.homeModules.nixvim
+				../../programs/fish.nix
 				../../programs/tmux.nix
 				../../programs/vim.nix
 				../../programs/vscode.nix

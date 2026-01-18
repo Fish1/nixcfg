@@ -4,6 +4,9 @@
 		download-buffer-size = 524288000;
 	};
 
+	# allow unfree software
+	nixpkgs.config.allowUnfree = true;
+
 	# bootloader
 	boot.loader.grub.efiSupport = true;
 	boot.loader.efi.canTouchEfiVariables = true;

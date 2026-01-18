@@ -25,8 +25,6 @@
 		options = "--delete-older-than 30d";
 	};
 
-	nixpkgs.config.allowUnfree = true;
-
   networking.hostName = "jacob-desktop";
 
   services.xserver.xkb = {

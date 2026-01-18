@@ -51,13 +51,26 @@
 		plugins = {
 			lualine.enable = true;
 			bufferline.enable = true;
-			telescope.enable = true;
 			fidget.enable = true;
 			lsp-format.enable = true;
 			luasnip.enable = true;
 			trouble.enable = true;
 			web-devicons.enable = true;
 			hex.enable = true;
+
+			telescope = {
+				enable = true;
+				extensions = {
+					media-files = {
+						filetypes = [
+							"png"
+							"webp"
+							"jpg"
+							"jpeg"
+						];
+					};
+				};
+			};
 
 			neo-tree = {
 				enable = false;

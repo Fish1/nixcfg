@@ -1,12 +1,13 @@
-{ pkgs, ... }:
-{
+{ ... }: {
   imports = [
 		./hardware-configuration.nix
 		./home-manager.nix
-		../../programs/fish.nix
-		../../users/jacob.nix
 		../../common.nix
+		../../programs/steam.nix
+		../../users/jacob.nix
 	];
+
+	programs.fish.enable = true;
 
   services.flatpak.enable = true;
 	services.displayManager.sddm.enable = true;
