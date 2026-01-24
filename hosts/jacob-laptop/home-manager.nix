@@ -28,6 +28,7 @@
 			home.packages = [
 				pkgs.lua
 				pkgs.kstars
+				pkgs.kdePackages.kcalc
 			];
 
 			programs.home-manager.enable = true;
