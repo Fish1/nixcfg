@@ -2,12 +2,20 @@
 {
   imports = [
 		../../common.nix
+		../../users/jacob.nix
 		./hardware-configuration.nix
 		./home-manager.nix
-		../../programs/steam.nix
-		../../programs/fish.nix
-		../../programs/appimage.nix
-		../../users/jacob.nix
+
+		# shell
+		../../programs/nixos/fish.nix
+
+		# utility
+		../../programs/nixos/appimage.nix
+	
+		# games
+		../../programs/nixos/steam.nix
+		../../programs/nixos/gamescope.nix
+
 	];
 
 	boot.extraModprobeConfig = "options hid_apple fnmode=1";

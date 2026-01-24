@@ -1,13 +1,16 @@
 { ... }: {
   imports = [
+		../../common.nix
+		../../users/jacob.nix
 		./hardware-configuration.nix
 		./home-manager.nix
-		../../common.nix
-		../../programs/steam.nix
-		../../users/jacob.nix
-	];
+	
+		# shell
+		../../programs/nixos/fish.nix
 
-	programs.fish.enable = true;
+		# games
+		../../programs/nixos/steam.nix
+	];
 
   services.flatpak.enable = true;
 	services.displayManager.sddm.enable = true;

@@ -11,48 +11,60 @@
 			nixpkgs.config.allowUnfree = true;
 
 			imports = [
-				../../programs/tmux.nix
-				../../programs/nixvim.nix
-				../../programs/git.nix
-				../../programs/kitty.nix
-				../../programs/direnv.nix
-				../../programs/ghostty.nix
 				nixvim.homeModules.nixvim
+
+				# shell
+				../../programs/home-manager/fish.nix
+			
+				# utilities
+				../../programs/home-manager/direnv.nix
+				../../programs/home-manager/tmux.nix
+				../../programs/home-manager/btop.nix
+
+				# notes
+				../../programs/home-manager/obsidian.nix
+
+				# terminals
+				../../programs/home-manager/kitty.nix
+				../../programs/home-manager/ghostty.nix
+
+				# code
+				../../programs/home-manager/nixvim.nix
+				../../programs/home-manager/vim.nix
+				../../programs/home-manager/vscode.nix
+				../../programs/home-manager/gh.nix
+				../../programs/home-manager/git.nix
+				../../programs/home-manager/lazygit.nix
+				../../programs/home-manager/lazydocker.nix
+
+				# communications
+				../../programs/home-manager/discord.nix
+				../../programs/home-manager/firefox.nix
+
+				# games
+				../../programs/home-manager/mangohud.nix
+
 			];
 
 			home.packages = [
 				# utilities
 				pkgs.wget
-				pkgs.btop
 
 				# programming
-				pkgs.lazygit
-				pkgs.lazydocker
-				pkgs.vscode
-				pkgs.vim
-				pkgs.gh
 				pkgs.lua
 				pkgs.ansible
 				pkgs.sshpass
 
 				# communications
-				pkgs.firefox
-				pkgs.brave
-				pkgs.kdePackages.falkon
-				pkgs.discord-canary
 				pkgs.telegram-desktop
 
 				# games
 				pkgs.lm_sensors
-				pkgs.gamescope
-				pkgs.mangohud
 				pkgs.prismlauncher
-				pkgs.nexusmods-app-unfree
 
 				# art
 				pkgs.inkscape
 				pkgs.gimp3
-				pkgs.obsidian
 			];
 
 			programs.home-manager.enable = true;

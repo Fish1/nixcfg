@@ -12,17 +12,17 @@
 
 			imports = [
 				nixvim.homeModules.nixvim
-				../../programs/fish.nix
-				../../programs/tmux.nix
-				../../programs/vim.nix
-				../../programs/vscode.nix
-				../../programs/btop.nix
-				../../programs/nixvim.nix
-				../../programs/git.nix
-				../../programs/kitty.nix
-				../../programs/direnv.nix
-				../../programs/ghostty.nix
-				../../programs/gh.nix
+				../../programs/home-manager/fish.nix
+				../../programs/home-manager/tmux.nix
+				../../programs/home-manager/vim.nix
+				../../programs/home-manager/vscode.nix
+				../../programs/home-manager/btop.nix
+				../../programs/home-manager/nixvim.nix
+				../../programs/home-manager/git.nix
+				../../programs/home-manager/kitty.nix
+				../../programs/home-manager/direnv.nix
+				../../programs/home-manager/ghostty.nix
+				../../programs/home-manager/gh.nix
 			];
 
 			home.packages = [

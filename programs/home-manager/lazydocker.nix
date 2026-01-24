@@ -1,5 +1,5 @@
 { ... }: {
-	programs.fuzzel = {
+	programs.lazydocker = {
 		enable = true;
 	};
 }
