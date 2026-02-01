@@ -15,6 +15,7 @@
 
 				# shell
 				../../programs/home-manager/fish.nix
+				../../programs/home-manager/eza.nix
 			
 				# utilities
 				../../programs/home-manager/direnv.nix
@@ -49,6 +50,7 @@
 			home.packages = [
 				# utilities
 				pkgs.wget
+				pkgs.simplescreenrecorder
 
 				# programming
 				pkgs.lua
