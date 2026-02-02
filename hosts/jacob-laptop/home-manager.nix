@@ -12,6 +12,7 @@
 
 			imports = [
 				nixvim.homeModules.nixvim
+				../../programs/home-manager/eza.nix
 				../../programs/home-manager/fish.nix
 				../../programs/home-manager/tmux.nix
 				../../programs/home-manager/vim.nix
