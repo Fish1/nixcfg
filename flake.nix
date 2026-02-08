@@ -8,10 +8,12 @@
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
 		nixvim.url = "github:nix-community/nixvim";
-		# nixvim.inputs.nixpkgs.follows = "nixpkgs";
+		nixvim.inputs.nixpkgs.follows = "nixpkgs";
+
+		millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
 	};
 
-	outputs = { self, nixpkgs, home-manager, nixvim, ... } @attrs: {
+	outputs = { self, nixpkgs, home-manager, nixvim, millennium, ... } @attrs: {
 		nixosConfigurations = {
 			jacob-laptop = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
