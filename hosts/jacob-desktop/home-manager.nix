@@ -16,6 +16,7 @@
 				# shell
 				../../programs/home-manager/fish.nix
 				../../programs/home-manager/eza.nix
+				../../programs/home-manager/nix-your-shell.nix
 			
 				# utilities
 				../../programs/home-manager/direnv.nix

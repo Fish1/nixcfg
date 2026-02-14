@@ -24,6 +24,7 @@
 				../../programs/home-manager/direnv.nix
 				../../programs/home-manager/ghostty.nix
 				../../programs/home-manager/gh.nix
+				../../programs/home-manager/nix-your-shell.nix
 			];
 
 			home.packages = [
