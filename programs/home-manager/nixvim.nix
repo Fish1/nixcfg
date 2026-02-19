@@ -89,7 +89,6 @@
 					clangd.enable = true;
 					terraformls.enable = true;
 					gleam.enable = true;
-					ols.enable = true;
 					pyright.enable = true;
 					zls = {
 						enable = true;
