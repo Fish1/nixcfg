@@ -52,6 +52,7 @@
 				# utilities
 				pkgs.wget
 				pkgs.simplescreenrecorder
+				pkgs.qbittorrent
 
 				# programming
 				pkgs.lua
