@@ -20,6 +20,8 @@
 				../../programs/home-manager/btop.nix
 				../../programs/home-manager/nixvim.nix
 				../../programs/home-manager/git.nix
+				../../programs/home-manager/lazygit.nix
+				../../programs/home-manager/lazydocker.nix
 				../../programs/home-manager/kitty.nix
 				../../programs/home-manager/direnv.nix
 				../../programs/home-manager/ghostty.nix
