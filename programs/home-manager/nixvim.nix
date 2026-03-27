@@ -57,20 +57,7 @@
 			trouble.enable = true;
 			web-devicons.enable = true;
 			hex.enable = true;
-
-			telescope = {
-				enable = true;
-				extensions = {
-					media-files = {
-						filetypes = [
-							"png"
-							"webp"
-							"jpg"
-							"jpeg"
-						];
-					};
-				};
-			};
+			telescope.enable = true;
 
 			neo-tree = {
 				enable = false;

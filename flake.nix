@@ -3,12 +3,13 @@
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+		nixpkgs-2511.url = "github:nixos/nixpkgs?ref=release-25.11";
 
 		home-manager.url = "github:nix-community/home-manager";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
 		nixvim.url = "github:nix-community/nixvim";
-		nixvim.inputs.nixpkgs.follows = "nixpkgs";
+		nixvim.inputs.nixpkgs.follows = "nixpkgs-2511";
 
 		millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
 	};
