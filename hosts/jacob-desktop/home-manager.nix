@@ -32,6 +32,8 @@
 
 				# code
 				../../programs/home-manager/nixvim.nix
+				../../programs/home-manager/ripgrep.nix
+				../../programs/home-manager/fd.nix
 				../../programs/home-manager/vim.nix
 				../../programs/home-manager/vscode.nix
 				../../programs/home-manager/gh.nix
@@ -58,6 +60,7 @@
 				pkgs.lua
 				pkgs.ansible
 				pkgs.sshpass
+				pkgs.tree-sitter
 
 				# communications
 				pkgs.telegram-desktop

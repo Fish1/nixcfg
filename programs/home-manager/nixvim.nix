@@ -4,6 +4,8 @@
 		enable = true;
 		colorschemes.tokyonight.enable = true;
 		globals.mapleader = " ";
+		globals.loaded_netrwPlugin = 1;
+		globals.loaded_netrw = 1;
 		opts = {
 			number = true;
 			relativenumber = true;
@@ -60,7 +62,7 @@
 			telescope.enable = true;
 
 			neo-tree = {
-				enable = false;
+				enable = true;
 			};
 
 			treesitter = {

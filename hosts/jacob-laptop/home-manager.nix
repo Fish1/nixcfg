@@ -19,6 +19,8 @@
 				../../programs/home-manager/vscode.nix
 				../../programs/home-manager/btop.nix
 				../../programs/home-manager/nixvim.nix
+				../../programs/home-manager/ripgrep.nix
+				../../programs/home-manager/fd.nix
 				../../programs/home-manager/git.nix
 				../../programs/home-manager/lazygit.nix
 				../../programs/home-manager/lazydocker.nix
@@ -30,6 +32,7 @@
 			];
 
 			home.packages = [
+				pkgs.tree-sitter
 				pkgs.lua
 				pkgs.kstars
 				pkgs.kdePackages.kcalc
