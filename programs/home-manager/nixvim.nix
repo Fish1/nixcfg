@@ -32,6 +32,10 @@
 				action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
 				key = "<Leader>fz";
 			}
+			{
+				action ="<cmd>Neotree float<CR>";
+				key = "<Leader>e";
+			}
 		];
 
 		#extraPlugins = [(
