@@ -58,7 +58,6 @@
 			lualine.enable = true;
 			bufferline.enable = true;
 			fidget.enable = true;
-			lsp-format.enable = true;
 			luasnip.enable = true;
 			trouble.enable = true;
 			web-devicons.enable = true;
@@ -74,6 +73,10 @@
 				highlight.enable = true;
 				indent.enable = true;
 			};
+			
+			lsp-format.enable = true;
+			lsp-lines.enable = true;
+			lsp-signature.enable = true;
 
 			lsp = {
 				enable = true;
