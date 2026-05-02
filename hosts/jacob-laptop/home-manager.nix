@@ -1,13 +1,12 @@
-{ home-manager, nixvim, ... } :
-{
+{ home-manager, nixvim, nixpkgs-unfree, ... } : {
 	home-manager = {
 
 		extraSpecialArgs = {
-			inherit home-manager nixvim;
+			inherit home-manager nixvim nixpkgs-unfree;
 		};
 
 		users.jacob = { pkgs, nixvim, ... }: {
-			
+
 			nixpkgs.config.allowUnfree = true;
 
 			imports = [
@@ -29,6 +28,7 @@
 				../../programs/home-manager/ghostty.nix
 				../../programs/home-manager/gh.nix
 				../../programs/home-manager/nix-your-shell.nix
+				../../programs/home-manager/gemini-cli.nix
 			];
 
 			home.packages = [
@@ -36,6 +36,7 @@
 				pkgs.lua
 				pkgs.kstars
 				pkgs.kdePackages.kcalc
+				pkgs.lsof
 			];
 
 			programs.home-manager.enable = true;

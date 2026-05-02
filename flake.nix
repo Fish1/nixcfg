@@ -5,6 +5,9 @@
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		nixpkgs-2511.url = "github:nixos/nixpkgs?ref=release-25.11";
 
+		nixpkgs-unfree.url = "github:numtide/nixpkgs-unfree";
+		nixpkgs-unfree.inputs.nixpkgs.follows = "nixpkgs";
+
 		home-manager.url = "github:nix-community/home-manager";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -14,7 +17,7 @@
 		millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
 	};
 
-	outputs = { self, nixpkgs, home-manager, nixvim, millennium, ... } @attrs: {
+	outputs = { self, nixpkgs, nixpkgs-unfree, home-manager, nixvim, millennium, ... } @attrs: {
 		nixosConfigurations = {
 			jacob-laptop = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";

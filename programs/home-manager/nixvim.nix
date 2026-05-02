@@ -1,4 +1,4 @@
-{ ... }:
+{ nixpkgs-unfree, ... }:
 {
 	programs.nixvim = {
 		enable = true;
@@ -64,6 +64,16 @@
 			hex.enable = true;
 			telescope.enable = true;
 
+			sidekick = {
+				enable = true;
+				package = nixpkgs-unfree.legacyPackages.${"x86_64-linux"}.vimPlugins.sidekick-nvim;
+				settings = {
+					opts = {
+						nes.enabled = false;
+					};
+				};
+			};
+
 			neo-tree = {
 				enable = true;
 			};
@@ -83,9 +93,6 @@
 				servers = {
 					nixd.enable = true;
 					clangd.enable = true;
-					terraformls.enable = true;
-					gleam.enable = true;
-					pyright.enable = true;
 					zls = {
 						enable = true;
 						packageFallback = true;
@@ -101,12 +108,6 @@
 						'';
 					};
 					gopls = {
-						enable = true;
-						onAttach.function = ''
-							require("lsp-format").on_attach(client, bufnr)
-						'';
-					};
-					templ = {
 						enable = true;
 						onAttach.function = ''
 							require("lsp-format").on_attach(client, bufnr)
