@@ -1,9 +1,9 @@
-{ home-manager, nixvim, ... } :
+{ home-manager, nixvim, nixpkgs-unfree, ... } :
 {
 	home-manager = {
 
 		extraSpecialArgs = {
-			inherit home-manager nixvim;
+			inherit home-manager nixvim nixpkgs-unfree;
 		};
 
 		users.jacob = { pkgs, nixvim, ... }: {
@@ -40,9 +40,10 @@
 				../../programs/home-manager/git.nix
 				../../programs/home-manager/lazygit.nix
 				../../programs/home-manager/lazydocker.nix
+				../../programs/home-manager/gemini-cli.nix
 
 				# communications
-				../../programs/home-manager/discord.nix
+				# ../../programs/home-manager/discord.nix
 				../../programs/home-manager/firefox.nix
 
 				# games
@@ -55,6 +56,7 @@
 				pkgs.wget
 				pkgs.simplescreenrecorder
 				pkgs.qbittorrent
+				pkgs.lsof
 
 				# programming
 				pkgs.lua
