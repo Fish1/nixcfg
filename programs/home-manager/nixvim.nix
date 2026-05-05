@@ -86,7 +86,6 @@
 			
 			lsp-format.enable = true;
 			lsp-lines.enable = true;
-			lsp-signature.enable = true;
 
 			lsp = {
 				enable = true;
