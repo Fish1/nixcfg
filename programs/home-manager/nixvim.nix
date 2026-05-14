@@ -1,4 +1,4 @@
-{ nixpkgs-unfree, ... }:
+{ pkgs, nixpkgs-unfree, ... }:
 {
 	programs.nixvim = {
 		enable = true;
@@ -38,21 +38,22 @@
 			}
 		];
 
-		#extraPlugins = [(
-		#	pkgs.vimUtils.buildVimPlugin {
-		#		name = "love2d";
-		#		src = pkgs.fetchFromGitHub {
-		#			owner = "S1M0N38";
-		#			repo = "love2d.nvim";
-		#			rev = "a290eae5170246d71cd26dde76a1c0efeb4bd2fb";
-		#			hash = "sha256-8sLDGW2hyyfCk4IaN+s5vsHSlRsKKl1XsFE7I/zFRmU=";
-		#		};
-		#	}
-		#)];
+		extraPlugins = [(
+			pkgs.vimUtils.buildVimPlugin {
+				name = "love2d";
+				src = pkgs.fetchFromGitHub {
+					owner = "S1M0N38";
+					repo = "love2d.nvim";
+					rev = "25715394680590f56aab90390d430cab0dc46808";
+					# hash = "sha256-8sLDGW2hyyfCk4IaN+s5vsHSlRsKKl1XsFE7I/zFRmU=";
+					hash = "sha256-K1ZVmo5U2b2spjJTyLDYeXij0XIUjSYfAA5/W67PYu0=";
+				};
+			}
+		)];
 
-		#extraConfigLuaPost = ''
-		#	require('love2d').setup({})
-		#'';
+		extraConfigLuaPost = ''
+			require('love2d').setup({})
+		'';
 
 		plugins = {
 			lualine.enable = true;
