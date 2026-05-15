@@ -65,6 +65,14 @@
 			hex.enable = true;
 			telescope.enable = true;
 
+			snacks = {
+				enable = true;
+				settings = {
+					input.enabled = true;
+					picker.enabled = true;
+				};
+			};
+
 			sidekick = {
 				enable = true;
 				package = nixpkgs-unfree.legacyPackages.${"x86_64-linux"}.vimPlugins.sidekick-nvim;
@@ -73,6 +81,10 @@
 						nes.enabled = false;
 					};
 				};
+			};
+
+			opencode = {
+				enable = true;
 			};
 
 			neo-tree = {

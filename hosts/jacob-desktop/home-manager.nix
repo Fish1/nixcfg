@@ -41,6 +41,7 @@
 				../../programs/home-manager/lazygit.nix
 				../../programs/home-manager/lazydocker.nix
 				../../programs/home-manager/gemini-cli.nix
+				../../programs/home-manager/opencode.nix
 
 				# communications
 				# ../../programs/home-manager/discord.nix
