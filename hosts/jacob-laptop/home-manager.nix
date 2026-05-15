@@ -29,6 +29,7 @@
 				../../programs/home-manager/gh.nix
 				../../programs/home-manager/nix-your-shell.nix
 				../../programs/home-manager/gemini-cli.nix
+				../../programs/home-manager/opencode.nix
 			];
 
 			home.packages = [
