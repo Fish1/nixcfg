@@ -33,8 +33,16 @@
 				key = "<Leader>fz";
 			}
 			{
-				action ="<cmd>Neotree float<CR>";
+				action = "<cmd>Neotree float<CR>";
 				key = "<Leader>e";
+			}
+			{
+				action = "<cmd>lua require('opencode').toggle()<CR>";
+				key = "<Leader>oc";
+			}
+			{
+				action = "<cmd>lua require('opencode').select()<CR>";
+				key = "<Leader>ov";
 			}
 		];
 
