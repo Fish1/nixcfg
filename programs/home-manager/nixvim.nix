@@ -39,10 +39,33 @@
 			{
 				action = "<cmd>lua require('opencode').toggle()<CR>";
 				key = "<Leader>oc";
+				mode = [
+					"n"
+					"t"
+				];
 			}
 			{
 				action = "<cmd>lua require('opencode').select()<CR>";
 				key = "<Leader>ov";
+				mode = [
+					"n"
+					"x"
+				];
+			}
+			{
+				action = "<cmd>lua require('opencode').operator('@this ')";
+				key = "<Leader>oq";
+				mode = [
+					"n"
+					"x"
+				];
+			}
+			{
+				action = "<cmd>lua require('opencode').operator('@this ') .. '_'";
+				key = "<Leader>ow";
+				mode = [
+					"n"
+				];
 			}
 		];
 
