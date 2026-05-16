@@ -95,6 +95,7 @@
 			web-devicons.enable = true;
 			hex.enable = true;
 			telescope.enable = true;
+			precognition.enable = true;
 
 			snacks = {
 				enable = true;
