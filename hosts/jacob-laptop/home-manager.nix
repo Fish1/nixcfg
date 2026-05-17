@@ -38,6 +38,7 @@
 				pkgs.kstars
 				pkgs.kdePackages.kcalc
 				pkgs.lsof
+				pkgs.vlc
 			];
 
 			programs.home-manager.enable = true;
