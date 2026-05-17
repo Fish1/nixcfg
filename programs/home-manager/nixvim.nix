@@ -131,6 +131,7 @@
 			
 			lsp-format.enable = true;
 			lsp-lines.enable = true;
+			lsp-status.enable = true;
 
 			lsp = {
 				enable = true;
@@ -172,10 +173,6 @@
 					};
 					lua_ls = {
 						enable = true;
-					};
-					kotlin_language_server = {
-						enable = true;
-						packageFallback = true;
 					};
 				};
 

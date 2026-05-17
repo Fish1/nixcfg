@@ -32,6 +32,7 @@
 
 				# code
 				../../programs/home-manager/nixvim.nix
+                                # ../../programs/home-manager/neovim.nix
 				../../programs/home-manager/ripgrep.nix
 				../../programs/home-manager/fd.nix
 				../../programs/home-manager/vim.nix
@@ -57,7 +58,8 @@
 				pkgs.wget
 				pkgs.simplescreenrecorder
 				pkgs.qbittorrent
-				pkgs.lsof
+                                pkgs.lsof
+                                pkgs.unzip
 
 				# programming
 				pkgs.lua
