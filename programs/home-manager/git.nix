@@ -6,9 +6,11 @@
 		settings = {
 			user = {
 				name = "Jacob Enders";
-				email = "noreply@example.com";
+				email = "jacobenders1@gmail.com";
 			};
 			signing = {
+				format = "ssh";
+				key = "~/.ssh/id_ed25519.pub";
 				signByDefault = true;
 			};
 		};
