@@ -8,8 +8,6 @@
 				email = "jacobenders1@gmail.com";
 			};
 			signing = {
-				format = "ssh";
-				key = "/home/jacob/.ssh/id_ed25519.pub";
 				signByDefault = true;
 			};
 		};
