@@ -6,7 +6,10 @@
 		settings = {
 			user = {
 				name = "Jacob Enders";
-				email = "jacobenders1@gmail.com";
+				email = "noreply@example.com";
+			};
+			signing = {
+				signByDefault = true;
 			};
 		};
 	};
