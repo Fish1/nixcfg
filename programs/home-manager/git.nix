@@ -7,9 +7,6 @@
 				name = "Jacob Enders";
 				email = "jacobenders1@gmail.com";
 			};
-			signing = {
-				signByDefault = true;
-			};
 		};
 	};
 }
