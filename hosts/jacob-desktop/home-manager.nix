@@ -36,7 +36,7 @@
 				../../programs/home-manager/ripgrep.nix
 				../../programs/home-manager/fd.nix
 				../../programs/home-manager/vim.nix
-				../../programs/home-manager/vscode.nix
+				# ../../programs/home-manager/vscode.nix
 				../../programs/home-manager/gh.nix
 				../../programs/home-manager/git.nix
 				../../programs/home-manager/lazygit.nix

@@ -13,6 +13,7 @@
 			tabstop = 2;
 			shiftwidth = 2;
 			foldmethod = "manual";
+			autoread = true;
 		};
 
 		keymaps = [
@@ -53,19 +54,39 @@
 				];
 			}
 			{
-				action = "<cmd>lua require('opencode').operator('@this ')";
+				action = "<cmd>lua require('opencode').command('session.half.page.up')<CR>";
+				key = "<Leader>ok";
+				mode = [
+					"n"
+				];
+			}
+			{
+				action = "<cmd>lua require('opencode').command('session.half.page.down')<CR>";
+				key = "<Leader>oj";
+				mode = [
+					"n"
+				];
+			}
+			{
+				action = "<cmd>lua require('opencode').operator('@this ')<CR>";
 				key = "<Leader>oq";
 				mode = [
 					"n"
 					"x"
 				];
+				options = {
+					expr = true;
+				};
 			}
 			{
-				action = "<cmd>lua require('opencode').operator('@this ') .. '_'";
+				action = "<cmd>lua require('opencode').operator('@this ') .. '_'<CR>";
 				key = "<Leader>ow";
 				mode = [
 					"n"
 				];
+				options = {
+					expr = true;
+				};
 			}
 		];
 
@@ -117,6 +138,9 @@
 
 			opencode = {
 				enable = true;
+				settings = {
+					auto_reload = true;
+				};
 			};
 
 			neo-tree = {
