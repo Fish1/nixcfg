@@ -38,6 +38,22 @@
 				key = "<Leader>e";
 			}
 			{
+				action ="<cmd>lua require('opencode').ask('@this: ', { submit = true })<CR>";
+				key = "<Leader>oal";
+				mode = [
+					"n"
+					"x"
+				];
+			}
+			{
+				action ="<cmd>lua require('opencode').ask('@buffer: ', { submit = true })<CR>";
+				key = "<Leader>oab";
+				mode = [
+					"n"
+					"x"
+				];
+			}
+			{
 				action = "<cmd>lua require('opencode').toggle()<CR>";
 				key = "<Leader>oc";
 				mode = [
@@ -68,7 +84,7 @@
 				];
 			}
 			{
-				action = "<cmd>lua require('opencode').operator('@this ')<CR>";
+				action = "lua require('opencode').operator('@this ')";
 				key = "<Leader>oq";
 				mode = [
 					"n"
@@ -79,7 +95,7 @@
 				};
 			}
 			{
-				action = "<cmd>lua require('opencode').operator('@this ') .. '_'<CR>";
+				action = "lua require('opencode').operator('@this ') .. '_'";
 				key = "<Leader>ow";
 				mode = [
 					"n"
