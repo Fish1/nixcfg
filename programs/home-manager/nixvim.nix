@@ -221,7 +221,8 @@
 					gD = "references";
 					gd = "definition";
 					gi = "implementation";
-					gt = "type_definition";
+					# this is for goto next tab
+					# gt = "type_definition"; 
 					gr = "rename";
 				};
 			};

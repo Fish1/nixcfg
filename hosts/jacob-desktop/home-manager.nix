@@ -45,7 +45,7 @@
 				../../programs/home-manager/opencode.nix
 
 				# communications
-				# ../../programs/home-manager/discord.nix
+				../../programs/home-manager/discord.nix
 				../../programs/home-manager/firefox.nix
 
 				# games
@@ -58,8 +58,8 @@
 				pkgs.wget
 				pkgs.simplescreenrecorder
 				pkgs.qbittorrent
-                                pkgs.lsof
-                                pkgs.unzip
+        pkgs.lsof
+				pkgs.unzip
 
 				# programming
 				pkgs.lua
