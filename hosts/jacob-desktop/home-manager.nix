@@ -66,6 +66,7 @@
 				pkgs.ansible
 				pkgs.sshpass
 				pkgs.tree-sitter
+				pkgs.devenv
 
 				# communications
 				pkgs.telegram-desktop
