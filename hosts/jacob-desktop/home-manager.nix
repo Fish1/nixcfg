@@ -52,7 +52,7 @@
 				# programming
 				pkgs.lua
 				pkgs.ansible
-				pkgs.sshpass
+				# pkgs.sshpass
 				pkgs.tree-sitter
 				pkgs.devenv
 
