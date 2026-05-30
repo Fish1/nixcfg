@@ -16,7 +16,6 @@
 				# shell
 				../../programs/home-manager/fish.nix
 				../../programs/home-manager/eza.nix
-				../../programs/home-manager/nix-your-shell.nix
 			
 				# utilities
 				../../programs/home-manager/direnv.nix
@@ -27,37 +26,26 @@
 				../../programs/home-manager/obsidian.nix
 
 				# terminals
-				../../programs/home-manager/kitty.nix
 				../../programs/home-manager/ghostty.nix
 
 				# code
 				../../programs/home-manager/nixvim.nix
-                                # ../../programs/home-manager/neovim.nix
 				../../programs/home-manager/ripgrep.nix
 				../../programs/home-manager/fd.nix
 				../../programs/home-manager/vim.nix
-				# ../../programs/home-manager/vscode.nix
 				../../programs/home-manager/gh.nix
 				../../programs/home-manager/git.nix
 				../../programs/home-manager/lazygit.nix
 				../../programs/home-manager/lazydocker.nix
-				../../programs/home-manager/gemini-cli.nix
 				../../programs/home-manager/opencode.nix
-
-				# communications
-				../../programs/home-manager/discord.nix
-				../../programs/home-manager/firefox.nix
 
 				# games
 				../../programs/home-manager/mangohud.nix
-
 			];
 
 			home.packages = [
 				# utilities
 				pkgs.wget
-				pkgs.simplescreenrecorder
-				pkgs.qbittorrent
         pkgs.lsof
 				pkgs.unzip
 
