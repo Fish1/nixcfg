@@ -11,7 +11,7 @@
 				grep = "allow";
 				glob = "allow";
 				webfetch = "allow";
-				websearch = "allow";
+
 				lsp = "allow";
 				skill = "ask";
 				question = "allow";
