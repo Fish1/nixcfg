@@ -39,6 +39,7 @@
 				pkgs.kdePackages.kcalc
 				pkgs.lsof
 				pkgs.vlc
+				pkgs.devenv
 			];
 
 			programs.home-manager.enable = true;

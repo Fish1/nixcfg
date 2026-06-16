@@ -178,6 +178,10 @@
 				servers = {
 					nixd.enable = true;
 					clangd.enable = true;
+					ols.enable = true;
+					ts_ls.enable = true;
+					eslint.enable = true;
+					tailwindcss.enable = true;
 					zls = {
 						enable = true;
 						packageFallback = true;
@@ -198,9 +202,6 @@
 							require("lsp-format").on_attach(client, bufnr)
 						'';
 					};
-					ts_ls.enable = true;
-					eslint.enable = true;
-					tailwindcss.enable = true;
 					html = {
 						enable = true;
 						filetypes = ["html"];
