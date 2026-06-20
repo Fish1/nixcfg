@@ -142,6 +142,7 @@
 				};
 			};
 
+			/*
 			sidekick = {
 				enable = true;
 				package = nixpkgs-unfree.legacyPackages.${"x86_64-linux"}.vimPlugins.sidekick-nvim;
@@ -151,6 +152,7 @@
 					};
 				};
 			};
+			*/
 
 			opencode = {
 				enable = true;
