@@ -179,8 +179,8 @@
 				enable = true;
 				servers = {
 					nixd.enable = true;
-					clangd.enable = true;
 					ols.enable = true;
+					clangd.enable = true;
 					ts_ls.enable = true;
 					eslint.enable = true;
 					tailwindcss.enable = true;
