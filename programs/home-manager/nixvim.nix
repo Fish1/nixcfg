@@ -178,7 +178,13 @@
 			lsp = {
 				enable = true;
 				servers = {
-					nixd.enable = true;
+					nixd = {
+						enable = true;
+						onAttach.function = ''
+							require("lsp-format").on_attach(client, bufnr)
+						'';
+					};
+					csharp_ls.enable = true;
 					ols.enable = true;
 					clangd.enable = true;
 					ts_ls.enable = true;
