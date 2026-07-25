@@ -1,50 +1,58 @@
-{ home-manager, nixvim, nixpkgs-unfree, ... } : {
-	home-manager = {
+{
+  home-manager,
+  nixvim,
+  nixpkgs-unfree,
+  ...
+}:
+{
+  home-manager = {
 
-		extraSpecialArgs = {
-			inherit home-manager nixvim nixpkgs-unfree;
-		};
+    extraSpecialArgs = {
+      inherit home-manager nixvim nixpkgs-unfree;
+    };
 
-		users.jacob = { pkgs, nixvim, ... }: {
+    users.jacob = { pkgs, nixvim, ... }: {
 
-			nixpkgs.config.allowUnfree = true;
+      nixpkgs.config.allowUnfree = true;
 
-			imports = [
-				nixvim.homeModules.nixvim
-				../../programs/home-manager/eza.nix
-				../../programs/home-manager/fish.nix
-				../../programs/home-manager/tmux.nix
-				../../programs/home-manager/vim.nix
-				../../programs/home-manager/vscode.nix
-				../../programs/home-manager/btop.nix
-				../../programs/home-manager/nixvim.nix
-				../../programs/home-manager/ripgrep.nix
-				../../programs/home-manager/fd.nix
-				../../programs/home-manager/git.nix
-				../../programs/home-manager/lazygit.nix
-				../../programs/home-manager/lazydocker.nix
-				../../programs/home-manager/kitty.nix
-				../../programs/home-manager/direnv.nix
-				../../programs/home-manager/ghostty.nix
-				../../programs/home-manager/gh.nix
-				../../programs/home-manager/nix-your-shell.nix
-				# ../../programs/home-manager/gemini-cli.nix
-				../../programs/home-manager/opencode.nix
-			];
+      imports = [
+        nixvim.homeModules.nixvim
+        ../../programs/home-manager/eza.nix
+        ../../programs/home-manager/fish.nix
+        ../../programs/home-manager/tmux.nix
+        ../../programs/home-manager/vim.nix
+        ../../programs/home-manager/vscode.nix
+        ../../programs/home-manager/btop.nix
+        ../../programs/home-manager/nixvim.nix
+        ../../programs/home-manager/ripgrep.nix
+        ../../programs/home-manager/fd.nix
+        ../../programs/home-manager/git.nix
+        ../../programs/home-manager/lazygit.nix
+        ../../programs/home-manager/lazydocker.nix
+        ../../programs/home-manager/kitty.nix
+        ../../programs/home-manager/direnv.nix
+        ../../programs/home-manager/ghostty.nix
+        ../../programs/home-manager/gh.nix
+        ../../programs/home-manager/nix-your-shell.nix
+        # ../../programs/home-manager/gemini-cli.nix
+        ../../programs/home-manager/opencode.nix
+      ];
 
-			home.packages = [
-				pkgs.tree-sitter
-				pkgs.lua
-				pkgs.kstars
-				pkgs.kdePackages.kcalc
-				pkgs.lsof
-				pkgs.vlc
-				pkgs.devenv
-			];
+      home.packages = [
+        pkgs.nixfmt
+        pkgs.nixfmt-tree
+        pkgs.tree-sitter
+        pkgs.lua
+        pkgs.kstars
+        pkgs.kdePackages.kcalc
+        pkgs.lsof
+        pkgs.vlc
+        pkgs.devenv
+      ];
 
-			programs.home-manager.enable = true;
+      programs.home-manager.enable = true;
 
-			home.stateVersion = "24.05";
-		};
-	};
+      home.stateVersion = "24.05";
+    };
+  };
 }
