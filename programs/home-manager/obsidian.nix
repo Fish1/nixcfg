@@ -1,5 +1,5 @@
 { ... }: {
-	programs.obsidian = {
-		enable = true;
-	};
+  programs.obsidian = {
+    enable = true;
+  };
 }

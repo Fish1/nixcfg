@@ -1,76 +1,81 @@
-{ home-manager, nixvim, nixpkgs-unfree, ... } :
 {
-	home-manager = {
+  home-manager,
+  nixvim,
+  nixpkgs-unfree,
+  ...
+}:
+{
+  home-manager = {
 
-		extraSpecialArgs = {
-			inherit home-manager nixvim nixpkgs-unfree;
-		};
+    extraSpecialArgs = {
+      inherit home-manager nixvim nixpkgs-unfree;
+    };
 
-		users.jacob = { pkgs, nixvim, ... }: {
-			
-			nixpkgs.config.allowUnfree = true;
+    users.jacob = { pkgs, nixvim, ... }: {
 
-			imports = [
-				nixvim.homeModules.nixvim
+      nixpkgs.config.allowUnfree = true;
 
-				# shell
-				../../programs/home-manager/fish.nix
-				../../programs/home-manager/eza.nix
-			
-				# utilities
-				../../programs/home-manager/direnv.nix
-				../../programs/home-manager/tmux.nix
-				../../programs/home-manager/btop.nix
+      imports = [
+        nixvim.homeModules.nixvim
 
-				# notes
-				../../programs/home-manager/obsidian.nix
+        # shell
+        ../../programs/home-manager/fish.nix
+        ../../programs/home-manager/eza.nix
 
-				# terminals
-				../../programs/home-manager/ghostty.nix
+        # utilities
+        ../../programs/home-manager/direnv.nix
+        ../../programs/home-manager/tmux.nix
+        ../../programs/home-manager/btop.nix
 
-				# code
-				../../programs/home-manager/nixvim.nix
-				../../programs/home-manager/ripgrep.nix
-				../../programs/home-manager/fd.nix
-				../../programs/home-manager/vim.nix
-				../../programs/home-manager/gh.nix
-				../../programs/home-manager/git.nix
-				../../programs/home-manager/lazygit.nix
-				../../programs/home-manager/lazydocker.nix
-				../../programs/home-manager/opencode.nix
+        # notes
+        ../../programs/home-manager/obsidian.nix
 
-				# games
-				../../programs/home-manager/mangohud.nix
-			];
+        # terminals
+        ../../programs/home-manager/ghostty.nix
 
-			home.packages = [
-				# utilities
-				pkgs.wget
+        # code
+        ../../programs/home-manager/nixvim.nix
+        ../../programs/home-manager/ripgrep.nix
+        ../../programs/home-manager/fd.nix
+        ../../programs/home-manager/vim.nix
+        ../../programs/home-manager/gh.nix
+        ../../programs/home-manager/git.nix
+        ../../programs/home-manager/lazygit.nix
+        ../../programs/home-manager/lazydocker.nix
+        ../../programs/home-manager/opencode.nix
+
+        # games
+        ../../programs/home-manager/mangohud.nix
+      ];
+
+      home.packages = [
+        # utilities
+        pkgs.wget
         pkgs.lsof
-				pkgs.unzip
+        pkgs.unzip
 
-				# programming
-				pkgs.lua
-				pkgs.ansible
-				# pkgs.sshpass
-				pkgs.tree-sitter
-				pkgs.devenv
+        # programming
+        pkgs.lua
+        pkgs.ansible
+        # pkgs.sshpass
+        pkgs.tree-sitter
+        pkgs.devenv
 
-				# communications
-				pkgs.telegram-desktop
+        # communications
+        pkgs.telegram-desktop
 
-				# games
-				pkgs.lm_sensors
-				pkgs.prismlauncher
+        # games
+        pkgs.lm_sensors
+        pkgs.prismlauncher
 
-				# art
-				pkgs.inkscape
-				pkgs.gimp3
-			];
+        # art
+        pkgs.inkscape
+        pkgs.gimp3
+      ];
 
-			programs.home-manager.enable = true;
+      programs.home-manager.enable = true;
 
-			home.stateVersion = "24.05";
-		};
-	};
+      home.stateVersion = "24.05";
+    };
+  };
 }

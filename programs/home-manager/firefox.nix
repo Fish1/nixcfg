@@ -1,6 +1,6 @@
 { config, ... }: {
-	programs.firefox = {
-		enable = true;
-		configPath = "${config.xdg.configHome}/mozilla/firefox";
-	};
+  programs.firefox = {
+    enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
+  };
 }

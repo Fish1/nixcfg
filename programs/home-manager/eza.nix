@@ -1,9 +1,9 @@
 { ... }: {
-	programs.eza = {
-		enable = true;
-		enableFishIntegration = true;
-		git = true;
-		colors = "auto";
-		icons = "auto";
-	};
+  programs.eza = {
+    enable = true;
+    enableFishIntegration = true;
+    git = true;
+    colors = "auto";
+    icons = "auto";
+  };
 }

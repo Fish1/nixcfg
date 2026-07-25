@@ -1,270 +1,270 @@
 { pkgs, nixpkgs-unfree, ... }:
 {
-	programs.nixvim = {
-		enable = true;
-		colorschemes.tokyonight.enable = true;
-		globals.mapleader = " ";
-		globals.loaded_netrwPlugin = 1;
-		globals.loaded_netrw = 1;
-		opts = {
-			number = true;
-			relativenumber = true;
-			list = true;
-			tabstop = 2;
-			shiftwidth = 2;
-			foldmethod = "manual";
-			autoread = true;
-		};
+  programs.nixvim = {
+    enable = true;
+    colorschemes.tokyonight.enable = true;
+    globals.mapleader = " ";
+    globals.loaded_netrwPlugin = 1;
+    globals.loaded_netrw = 1;
+    opts = {
+      number = true;
+      relativenumber = true;
+      list = true;
+      tabstop = 2;
+      shiftwidth = 2;
+      foldmethod = "manual";
+      autoread = true;
+    };
 
-		keymaps = [
-			{
-				action = "<cmd>DapToggleBreakpoint<CR>";
-				key = "<Leader>db";
-			}
-			{
-				action = "<cmd>Telescope find_files<CR>";
-				key = "<Leader>ff";
-			}
-			{
-				action = "<cmd>Telescope buffers<CR>";
-				key = "<Leader>fb";
-			}
-			{
-				action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
-				key = "<Leader>fz";
-			}
-			{
-				action = "<cmd>Neotree float<CR>";
-				key = "<Leader>e";
-			}
-			{
-				action ="<cmd>lua require('opencode').ask('@this: ', { submit = true })<CR>";
-				key = "<Leader>oal";
-				mode = [
-					"n"
-					"x"
-				];
-			}
-			{
-				action ="<cmd>lua require('opencode').ask('@buffer: ', { submit = true })<CR>";
-				key = "<Leader>oab";
-				mode = [
-					"n"
-					"x"
-				];
-			}
-			{
-				action = "<cmd>lua require('opencode').toggle()<CR>";
-				key = "<Leader>oc";
-				mode = [
-					"n"
-					"t"
-				];
-			}
-			{
-				action = "<cmd>lua require('opencode').select()<CR>";
-				key = "<Leader>ov";
-				mode = [
-					"n"
-					"x"
-				];
-			}
-			{
-				action = "<cmd>lua require('opencode').command('session.half.page.up')<CR>";
-				key = "<Leader>ok";
-				mode = [
-					"n"
-				];
-			}
-			{
-				action = "<cmd>lua require('opencode').command('session.half.page.down')<CR>";
-				key = "<Leader>oj";
-				mode = [
-					"n"
-				];
-			}
-			{
-				action = "lua require('opencode').operator('@this ')";
-				key = "<Leader>oq";
-				mode = [
-					"n"
-					"x"
-				];
-				options = {
-					expr = true;
-				};
-			}
-			{
-				action = "lua require('opencode').operator('@this ') .. '_'";
-				key = "<Leader>ow";
-				mode = [
-					"n"
-				];
-				options = {
-					expr = true;
-				};
-			}
-		];
+    keymaps = [
+      {
+        action = "<cmd>DapToggleBreakpoint<CR>";
+        key = "<Leader>db";
+      }
+      {
+        action = "<cmd>Telescope find_files<CR>";
+        key = "<Leader>ff";
+      }
+      {
+        action = "<cmd>Telescope buffers<CR>";
+        key = "<Leader>fb";
+      }
+      {
+        action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
+        key = "<Leader>fz";
+      }
+      {
+        action = "<cmd>Neotree float<CR>";
+        key = "<Leader>e";
+      }
+      {
+        action = "<cmd>lua require('opencode').ask('@this: ', { submit = true })<CR>";
+        key = "<Leader>oal";
+        mode = [
+          "n"
+          "x"
+        ];
+      }
+      {
+        action = "<cmd>lua require('opencode').ask('@buffer: ', { submit = true })<CR>";
+        key = "<Leader>oab";
+        mode = [
+          "n"
+          "x"
+        ];
+      }
+      {
+        action = "<cmd>lua require('opencode').toggle()<CR>";
+        key = "<Leader>oc";
+        mode = [
+          "n"
+          "t"
+        ];
+      }
+      {
+        action = "<cmd>lua require('opencode').select()<CR>";
+        key = "<Leader>ov";
+        mode = [
+          "n"
+          "x"
+        ];
+      }
+      {
+        action = "<cmd>lua require('opencode').command('session.half.page.up')<CR>";
+        key = "<Leader>ok";
+        mode = [
+          "n"
+        ];
+      }
+      {
+        action = "<cmd>lua require('opencode').command('session.half.page.down')<CR>";
+        key = "<Leader>oj";
+        mode = [
+          "n"
+        ];
+      }
+      {
+        action = "lua require('opencode').operator('@this ')";
+        key = "<Leader>oq";
+        mode = [
+          "n"
+          "x"
+        ];
+        options = {
+          expr = true;
+        };
+      }
+      {
+        action = "lua require('opencode').operator('@this ') .. '_'";
+        key = "<Leader>ow";
+        mode = [
+          "n"
+        ];
+        options = {
+          expr = true;
+        };
+      }
+    ];
 
-		extraPlugins = [(
-			pkgs.vimUtils.buildVimPlugin {
-				name = "love2d";
-				src = pkgs.fetchFromGitHub {
-					owner = "S1M0N38";
-					repo = "love2d.nvim";
-					rev = "25715394680590f56aab90390d430cab0dc46808";
-					# hash = "sha256-8sLDGW2hyyfCk4IaN+s5vsHSlRsKKl1XsFE7I/zFRmU=";
-					hash = "sha256-K1ZVmo5U2b2spjJTyLDYeXij0XIUjSYfAA5/W67PYu0=";
-				};
-			}
-		)];
+    extraPlugins = [
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "love2d";
+        src = pkgs.fetchFromGitHub {
+          owner = "S1M0N38";
+          repo = "love2d.nvim";
+          rev = "25715394680590f56aab90390d430cab0dc46808";
+          # hash = "sha256-8sLDGW2hyyfCk4IaN+s5vsHSlRsKKl1XsFE7I/zFRmU=";
+          hash = "sha256-K1ZVmo5U2b2spjJTyLDYeXij0XIUjSYfAA5/W67PYu0=";
+        };
+      })
+    ];
 
-		extraConfigLuaPost = ''
-			require('love2d').setup({})
-		'';
+    extraConfigLuaPost = ''
+      			require('love2d').setup({})
+      		'';
 
-		plugins = {
-			lualine.enable = true;
-			bufferline.enable = true;
-			fidget.enable = true;
-			luasnip.enable = true;
-			trouble.enable = true;
-			web-devicons.enable = true;
-			hex.enable = true;
-			telescope.enable = true;
-			precognition.enable = true;
+    plugins = {
+      lualine.enable = true;
+      bufferline.enable = true;
+      fidget.enable = true;
+      luasnip.enable = true;
+      trouble.enable = true;
+      web-devicons.enable = true;
+      hex.enable = true;
+      telescope.enable = true;
+      precognition.enable = true;
 
-			snacks = {
-				enable = true;
-				settings = {
-					input.enabled = true;
-					picker.enabled = true;
-				};
-			};
+      snacks = {
+        enable = true;
+        settings = {
+          input.enabled = true;
+          picker.enabled = true;
+        };
+      };
 
-			/*
-			sidekick = {
-				enable = true;
-				package = nixpkgs-unfree.legacyPackages.${"x86_64-linux"}.vimPlugins.sidekick-nvim;
-				settings = {
-					opts = {
-						nes.enabled = false;
-					};
-				};
-			};
-			*/
+      /*
+        			sidekick = {
+        				enable = true;
+        				package = nixpkgs-unfree.legacyPackages.${"x86_64-linux"}.vimPlugins.sidekick-nvim;
+        				settings = {
+        					opts = {
+        						nes.enabled = false;
+        					};
+        				};
+        			};
+      */
 
-			opencode = {
-				enable = true;
-				settings = {
-					auto_reload = true;
-				};
-			};
+      opencode = {
+        enable = true;
+        settings = {
+          auto_reload = true;
+        };
+      };
 
-			neo-tree = {
-				enable = true;
-			};
+      neo-tree = {
+        enable = true;
+      };
 
-			treesitter = {
-				enable = true;
-				highlight.enable = true;
-				indent.enable = true;
-			};
-			
-			lsp-format.enable = true;
-			lsp-lines.enable = true;
-			lsp-status.enable = true;
+      treesitter = {
+        enable = true;
+        highlight.enable = true;
+        indent.enable = true;
+      };
 
-			lsp = {
-				enable = true;
-				servers = {
-					nixd = {
-						enable = true;
-						onAttach.function = ''
-							require("lsp-format").on_attach(client, bufnr)
-						'';
-					};
-					gdscript.enable = true;
-					gdscript.package = null;
-					gdscript.packageFallback = true;
-					csharp_ls.enable = true;
-					ols.enable = true;
-					clangd.enable = true;
-					ts_ls.enable = true;
-					eslint.enable = true;
-					tailwindcss.enable = true;
-					zls = {
-						enable = true;
-						packageFallback = true;
-						# package = nixpkgs-ddogfoodd.legacyPackages.${"x86_64-linux"}.zls;
-					};
-					rust_analyzer = {
-						enable = true;
-						packageFallback = true;
-						installRustc = false;
-						installCargo = false;
-						onAttach.function = ''
-							require("lsp-format").on_attach(client, bufnr)
-						'';
-					};
-					gopls = {
-						enable = true;
-						onAttach.function = ''
-							require("lsp-format").on_attach(client, bufnr)
-						'';
-					};
-					html = {
-						enable = true;
-						filetypes = ["html"];
-					};
-					svelte = {
-						enable = true;
-						onAttach.function = ''
-							require("lsp-format").on_attach(client, bufnr)
-						'';
-					};
-					lua_ls = {
-						enable = true;
-					};
-				};
+      lsp-format.enable = true;
+      lsp-lines.enable = true;
+      lsp-status.enable = true;
 
-				keymaps.lspBuf = {
-					K = "hover";
-					gD = "references";
-					gd = "definition";
-					gi = "implementation";
-					# this is for goto next tab
-					# gt = "type_definition"; 
-					gr = "rename";
-				};
-			};
+      lsp = {
+        enable = true;
+        servers = {
+          nixd = {
+            enable = true;
+            onAttach.function = ''
+              							require("lsp-format").on_attach(client, bufnr)
+              						'';
+          };
+          gdscript.enable = true;
+          gdscript.package = null;
+          gdscript.packageFallback = true;
+          csharp_ls.enable = true;
+          ols.enable = true;
+          clangd.enable = true;
+          ts_ls.enable = true;
+          eslint.enable = true;
+          tailwindcss.enable = true;
+          zls = {
+            enable = true;
+            packageFallback = true;
+            # package = nixpkgs-ddogfoodd.legacyPackages.${"x86_64-linux"}.zls;
+          };
+          rust_analyzer = {
+            enable = true;
+            packageFallback = true;
+            installRustc = false;
+            installCargo = false;
+            onAttach.function = ''
+              							require("lsp-format").on_attach(client, bufnr)
+              						'';
+          };
+          gopls = {
+            enable = true;
+            onAttach.function = ''
+              							require("lsp-format").on_attach(client, bufnr)
+              						'';
+          };
+          html = {
+            enable = true;
+            filetypes = [ "html" ];
+          };
+          svelte = {
+            enable = true;
+            onAttach.function = ''
+              							require("lsp-format").on_attach(client, bufnr)
+              						'';
+          };
+          lua_ls = {
+            enable = true;
+          };
+        };
 
-			cmp = {
-				enable = true;
-				autoEnableSources = true;
-				settings = {
-					snippet.expand = ''
-						function(args)
-							require('luasnip').lsp_expand(args.body)
-						end
-					'';
-					sources = [
-						{ name = "nvim_lsp"; }
-						{ name = "luasnip"; }
-						{ name = "path"; }
-						{ name = "buffer"; }
-					];
-					mapping = {
-						"<C-Space>" = "cmp.mapping.complete()";
-						"<C-d>" = "cmp.mapping.scroll_docs(-4)";
-						"<C-e>" = "cmp.mapping.close()";
-						"<C-f>" = "cmp.mapping.scroll_docs(4)";
-						"<CR>" = "cmp.mapping.confirm({ select = true })";
-						"<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-						"<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-					};
-				};
-			};
-		};
-	};
+        keymaps.lspBuf = {
+          K = "hover";
+          gD = "references";
+          gd = "definition";
+          gi = "implementation";
+          # this is for goto next tab
+          # gt = "type_definition";
+          gr = "rename";
+        };
+      };
+
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings = {
+          snippet.expand = ''
+            						function(args)
+            							require('luasnip').lsp_expand(args.body)
+            						end
+            					'';
+          sources = [
+            { name = "nvim_lsp"; }
+            { name = "luasnip"; }
+            { name = "path"; }
+            { name = "buffer"; }
+          ];
+          mapping = {
+            "<C-Space>" = "cmp.mapping.complete()";
+            "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+            "<C-e>" = "cmp.mapping.close()";
+            "<C-f>" = "cmp.mapping.scroll_docs(4)";
+            "<CR>" = "cmp.mapping.confirm({ select = true })";
+            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+          };
+        };
+      };
+    };
+  };
 }

@@ -1,8 +1,8 @@
 { ... }: {
-	programs.fish = {
-		enable = true;
-		shellAliases = {
-			ls = "eza";
-		};
-	};
+  programs.fish = {
+    enable = true;
+    shellAliases = {
+      ls = "eza";
+    };
+  };
 }

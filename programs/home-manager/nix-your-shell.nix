@@ -1,6 +1,6 @@
 { ... }: {
-	programs.nix-your-shell = {
-		enable = true;
-		enableFishIntegration = true;
-	};
+  programs.nix-your-shell = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 }
