@@ -184,6 +184,9 @@
 							require("lsp-format").on_attach(client, bufnr)
 						'';
 					};
+					gdscript.enable = true;
+					gdscript.package = null;
+					gdscript.packageFallback = true;
 					csharp_ls.enable = true;
 					ols.enable = true;
 					clangd.enable = true;
