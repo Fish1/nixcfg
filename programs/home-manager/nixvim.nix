@@ -14,6 +14,7 @@
       shiftwidth = 2;
       foldmethod = "manual";
       autoread = true;
+      wrap = false;
     };
 
     keymaps = [
