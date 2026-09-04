@@ -43,11 +43,11 @@
         pkgs.nixfmt-tree
         pkgs.tree-sitter
         pkgs.lua
-        pkgs.kstars
-        pkgs.kdePackages.kcalc
         pkgs.lsof
         pkgs.vlc
         pkgs.devenv
+        pkgs.kstars
+        pkgs.kdePackages.kcalc
       ];
 
       programs.home-manager.enable = true;
