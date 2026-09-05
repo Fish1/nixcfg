@@ -17,6 +17,18 @@
         skill = "ask";
         question = "allow";
       };
+      mcp = {
+        nixos = {
+          enabled = true;
+          type = "local";
+          command = [
+            "nix"
+            "run"
+            "github:utensils/mcp-nixos"
+            "--"
+          ];
+        };
+      };
     };
     tui.settings = {
       theme = "tokyonight";

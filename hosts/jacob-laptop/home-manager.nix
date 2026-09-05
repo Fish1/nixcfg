@@ -36,6 +36,7 @@
         ../../programs/home-manager/nix-your-shell.nix
         # ../../programs/home-manager/gemini-cli.nix
         ../../programs/home-manager/opencode.nix
+        ../../programs/home-manager/chrome.nix
       ];
 
       home.packages = [
@@ -48,6 +49,10 @@
         pkgs.devenv
         pkgs.kstars
         pkgs.kdePackages.kcalc
+        (pkgs.callPackage ../../programs/custom/mything.nix {
+          a = "This is just an example command.";
+          b = "";
+        })
       ];
 
       programs.home-manager.enable = true;
