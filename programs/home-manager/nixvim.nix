@@ -55,19 +55,11 @@
         ];
       }
       {
-        action = "<cmd>lua require('opencode').toggle()<CR>";
+        action = "<cmd>lua require('opencode').select()<CR>";
         key = "<Leader>oc";
         mode = [
           "n"
           "t"
-        ];
-      }
-      {
-        action = "<cmd>lua require('opencode').select()<CR>";
-        key = "<Leader>ov";
-        mode = [
-          "n"
-          "x"
         ];
       }
       {
@@ -83,27 +75,6 @@
         mode = [
           "n"
         ];
-      }
-      {
-        action = "lua require('opencode').operator('@this ')";
-        key = "<Leader>oq";
-        mode = [
-          "n"
-          "x"
-        ];
-        options = {
-          expr = true;
-        };
-      }
-      {
-        action = "lua require('opencode').operator('@this ') .. '_'";
-        key = "<Leader>ow";
-        mode = [
-          "n"
-        ];
-        options = {
-          expr = true;
-        };
       }
     ];
 
