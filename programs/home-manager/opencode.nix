@@ -17,13 +17,6 @@
         skill = "ask";
         question = "allow";
       };
-      mcp = {
-        pixel = {
-          type = "local";
-          command = [ "/home/jacob/Projects/digitales-ai/pixel-mcp/bin/pixel-mcp" ];
-          enable = true;
-        };
-      };
     };
     tui.settings = {
       theme = "tokyonight";
