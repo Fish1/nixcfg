@@ -2,6 +2,7 @@
   home-manager,
   nixvim,
   nixpkgs-unfree,
+  zen-browser,
   ...
 }:
 {
@@ -17,6 +18,7 @@
 
       imports = [
         nixvim.homeModules.nixvim
+        zen-browser.homeModules.twilight
         ../../programs/home-manager/eza.nix
         ../../programs/home-manager/fish.nix
         ../../programs/home-manager/tmux.nix
@@ -37,6 +39,7 @@
         # ../../programs/home-manager/gemini-cli.nix
         ../../programs/home-manager/opencode.nix
         ../../programs/home-manager/chrome.nix
+        ../../programs/home-manager/zen.nix
       ];
 
       home.packages = [
