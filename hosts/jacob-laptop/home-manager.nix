@@ -52,6 +52,7 @@
         pkgs.devenv
         pkgs.kstars
         pkgs.kdePackages.kcalc
+        pkgs.mcp-nixos
         (pkgs.callPackage ../../programs/custom/mything.nix {
           a = "This is just an example command.";
           b = "";

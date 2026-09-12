@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, lib, ... }: {
   programs.opencode = {
     enable = true;
     enableMcpIntegration = true;
@@ -22,10 +22,21 @@
           enabled = true;
           type = "local";
           command = [
-            "nix"
-            "run"
-            "github:utensils/mcp-nixos"
-            "--"
+            (lib.getExe pkgs.mcp-nixos)
+          ];
+        };
+        git = {
+          enabled = true;
+          type = "local";
+          command = [
+            (lib.getExe pkgs.mcp-server-git)
+          ];
+        };
+        fetch = {
+          enabled = true;
+          type = "local";
+          command = [
+            (lib.getExe pkgs.mcp-server-fetch)
           ];
         };
       };
