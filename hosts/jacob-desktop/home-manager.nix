@@ -51,6 +51,7 @@
 
 				# internet
 				../../programs/home-manager/zen.nix
+				../../programs/home-manager/discord.nix
       ];
 
       home.packages = [
@@ -58,19 +59,15 @@
         pkgs.wget
         pkgs.lsof
         pkgs.unzip
+        pkgs.lm_sensors
 
         # programming
         pkgs.lua
         pkgs.ansible
         # pkgs.sshpass
         pkgs.tree-sitter
-        pkgs.devenv
-
-        # communications
-        pkgs.telegram-desktop
 
         # games
-        pkgs.lm_sensors
         pkgs.prismlauncher
 
         # art
