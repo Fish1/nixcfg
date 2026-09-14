@@ -52,6 +52,7 @@
 				# internet
 				../../programs/home-manager/zen.nix
 				../../programs/home-manager/discord.nix
+				../../programs/home-manager/chrome.nix
       ];
 
       home.packages = [
@@ -60,6 +61,7 @@
         pkgs.lsof
         pkgs.unzip
         pkgs.lm_sensors
+				pkgs.microfetch
 
         # programming
         pkgs.lua

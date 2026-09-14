@@ -2,6 +2,9 @@
   programs.opencode = {
     enable = true;
     enableMcpIntegration = true;
+
+		context = "When encountering an error, first check the internet for documentation.";
+
     settings = {
       autoupdate = true;
       lsp = true;
