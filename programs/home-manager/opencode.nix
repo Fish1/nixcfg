@@ -6,7 +6,7 @@
 		context = "When encountering an error, first check the internet for documentation.";
 
     settings = {
-      autoupdate = true;
+      autoupdate = false;
       lsp = true;
       formatter = true;
       permission = {
@@ -44,6 +44,7 @@
         };
       };
     };
+
     tui.settings = {
       theme = "tokyonight";
     };

@@ -68,6 +68,8 @@
         pkgs.ansible
         # pkgs.sshpass
         pkgs.tree-sitter
+				# pkgs.llama-cpp
+				pkgs.llama-cpp-rocm
 
         # games
         pkgs.prismlauncher
