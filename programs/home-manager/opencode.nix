@@ -3,7 +3,7 @@
     enable = true;
     enableMcpIntegration = true;
 
-		context = "When encountering an error, first check the internet for documentation.";
+		context = "Always check the internet for documentation.";
 
     settings = {
       autoupdate = false;
@@ -12,12 +12,12 @@
       permission = {
         bash = "ask";
         edit = "ask";
+        skill = "ask";
+
         grep = "allow";
         glob = "allow";
         webfetch = "allow";
-
         lsp = "allow";
-        skill = "ask";
         question = "allow";
       };
       mcp = {
