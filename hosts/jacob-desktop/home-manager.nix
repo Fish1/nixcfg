@@ -66,10 +66,10 @@
         # programming
         pkgs.lua
         pkgs.ansible
-        # pkgs.sshpass
         pkgs.tree-sitter
-				# pkgs.llama-cpp
 				pkgs.llama-cpp-rocm
+				pkgs.nixfmt
+				pkgs.nixfmt-tree
 
         # games
         pkgs.prismlauncher
