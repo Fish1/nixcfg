@@ -4,6 +4,7 @@
     enableFishIntegration = true;
     settings = {
       theme = "TokyoNight";
+      font-family = "JetBrainsMono Nerd Font";
     };
   };
 }
