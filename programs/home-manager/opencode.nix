@@ -3,8 +3,6 @@
     enable = true;
     enableMcpIntegration = true;
 
-		context = "Always check the internet for documentation.";
-
     settings = {
       autoupdate = false;
       lsp = true;

@@ -2,7 +2,7 @@
   home-manager,
   nixvim,
   nixpkgs-unfree,
-	zen-browser,
+  zen-browser,
   ...
 }:
 {
@@ -18,7 +18,7 @@
 
       imports = [
         nixvim.homeModules.nixvim
-				zen-browser.homeModules.twilight
+        zen-browser.homeModules.twilight
 
         # shell
         ../../programs/home-manager/fish.nix
@@ -49,10 +49,10 @@
         # games
         ../../programs/home-manager/mangohud.nix
 
-				# internet
-				../../programs/home-manager/zen.nix
-				../../programs/home-manager/discord.nix
-				../../programs/home-manager/chrome.nix
+        # internet
+        ../../programs/home-manager/zen.nix
+        ../../programs/home-manager/discord.nix
+        ../../programs/home-manager/chrome.nix
       ];
 
       home.packages = [
@@ -61,15 +61,15 @@
         pkgs.lsof
         pkgs.unzip
         pkgs.lm_sensors
-				pkgs.microfetch
+        pkgs.microfetch
 
         # programming
         pkgs.lua
         pkgs.ansible
         pkgs.tree-sitter
-				pkgs.llama-cpp-rocm
-				pkgs.nixfmt
-				pkgs.nixfmt-tree
+        pkgs.llama-cpp-rocm
+        pkgs.nixfmt
+        pkgs.nixfmt-tree
 
         # games
         pkgs.prismlauncher
