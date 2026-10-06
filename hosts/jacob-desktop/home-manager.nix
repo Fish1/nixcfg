@@ -77,6 +77,9 @@
         # art
         pkgs.inkscape
         pkgs.gimp3
+
+        # video
+        pkgs.kdePackages.kdenlive
       ];
 
       programs.home-manager.enable = true;
