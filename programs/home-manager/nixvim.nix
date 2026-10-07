@@ -79,6 +79,7 @@
     ];
 
     extraPlugins = [
+      pkgs.vimPlugins.carderne-pi-nvim
       (pkgs.vimUtils.buildVimPlugin {
         name = "love2d";
         src = pkgs.fetchFromGitHub {

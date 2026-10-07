@@ -9,5 +9,9 @@
     plugins = [
       pkgs.tmuxPlugins.tokyo-night-tmux
     ];
+    extraConfig = "
+			set-option -g extended-keys on
+			set -g extended-keys-format csi-u
+		";
   };
 }
