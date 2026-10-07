@@ -85,15 +85,14 @@
           owner = "S1M0N38";
           repo = "love2d.nvim";
           rev = "25715394680590f56aab90390d430cab0dc46808";
-          # hash = "sha256-8sLDGW2hyyfCk4IaN+s5vsHSlRsKKl1XsFE7I/zFRmU=";
           hash = "sha256-K1ZVmo5U2b2spjJTyLDYeXij0XIUjSYfAA5/W67PYu0=";
         };
       })
     ];
 
     extraConfigLuaPost = ''
-      			require('love2d').setup({})
-      		'';
+      require('love2d').setup({})
+    '';
 
     plugins = {
       lualine.enable = true;

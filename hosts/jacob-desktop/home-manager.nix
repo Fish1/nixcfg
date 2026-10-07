@@ -45,6 +45,7 @@
         ../../programs/home-manager/lazygit.nix
         ../../programs/home-manager/lazydocker.nix
         ../../programs/home-manager/opencode.nix
+        ../../programs/home-manager/pi.nix
 
         # games
         ../../programs/home-manager/mangohud.nix
