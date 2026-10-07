@@ -92,7 +92,8 @@
     ];
 
     extraConfigLuaPost = ''
-      require('love2d').setup({})
+            require('love2d').setup({})
+      			require("pi-nvim").setup({})
     '';
 
     plugins = {
