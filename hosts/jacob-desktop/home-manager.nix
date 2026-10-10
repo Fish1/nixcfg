@@ -68,9 +68,13 @@
         pkgs.lua
         pkgs.ansible
         pkgs.tree-sitter
-        pkgs.llama-cpp-rocm
         pkgs.nixfmt
         pkgs.nixfmt-tree
+
+        # ai
+        pkgs.llama-cpp-rocm
+        pkgs.stable-diffusion-cpp-rocm
+        pkgs.koboldcpp
 
         # games
         pkgs.prismlauncher
