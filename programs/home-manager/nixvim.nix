@@ -134,25 +134,6 @@
         };
       };
 
-      cmp-ai = {
-        enable = true;
-        settings = {
-          max_lines = 1000;
-          provider = "Codestral";
-          provider_options = {
-            model = "codestral-latest";
-            api_key = {
-              __raw = "os.getenv('mistral_api_key')";
-            };
-          };
-
-          notify = true;
-          notify_callback = {
-            __raw = "function(msg) vim.notify(msg) end";
-          };
-        };
-      };
-
       neo-tree = {
         enable = true;
       };
@@ -245,18 +226,9 @@
             { name = "luasnip"; }
             { name = "path"; }
             { name = "buffer"; }
-            {
-              name = "cmp_ai";
-              group_index = 1;
-            }
           ];
 
-          experimental = {
-            ghost_text = true;
-          };
-
           mapping = {
-            "<C-x>" = "cmp.mapping.complete({ config = { sources = { { name = 'cmp_ai' } } } })";
             "<C-Space>" = "cmp.mapping.complete()";
             "<C-d>" = "cmp.mapping.scroll_docs(-4)";
             "<C-e>" = "cmp.mapping.close()";

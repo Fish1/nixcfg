@@ -2,7 +2,6 @@
   programs.opencode = {
     enable = true;
     enableMcpIntegration = true;
-
     settings = {
       autoupdate = false;
       lsp = true;
@@ -42,10 +41,8 @@
         };
       };
     };
-
     tui.settings = {
       theme = "tokyonight";
     };
-
   };
 }
