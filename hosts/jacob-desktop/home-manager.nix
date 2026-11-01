@@ -63,6 +63,8 @@
         pkgs.unzip
         pkgs.lm_sensors
         pkgs.microfetch
+        pkgs.nordvpn
+        pkgs.nordpass
 
         # programming
         pkgs.lua
@@ -73,8 +75,16 @@
 
         # ai
         pkgs.llama-cpp-rocm
-        pkgs.stable-diffusion-cpp-rocm
-        pkgs.koboldcpp
+        (pkgs.stable-diffusion-cpp-rocm.overrideAttrs (oldAttrs: {
+          version = "master-1031-c6dfa9d";
+          src = pkgs.fetchFromGitHub {
+            owner = "leejet";
+            repo = "stable-diffusion.cpp";
+            rev = "master-1031-c6dfa9d";
+						hash = "sha256-Otbdz72ozWgemtoTOmwu/TuOMTKxcBq7NxgOpJWik+0=";
+            fetchSubmodules = true;
+          };
+        }))
 
         # games
         pkgs.prismlauncher
