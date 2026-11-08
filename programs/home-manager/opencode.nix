@@ -41,7 +41,7 @@
         };
       };
     };
-    tui.settings = {
+    cli.settings = {
       theme = "tokyonight";
     };
   };

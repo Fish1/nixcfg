@@ -8,6 +8,8 @@
 {
   home-manager = {
 
+    backupFileExtension = "backup";
+
     extraSpecialArgs = {
       inherit home-manager nixvim nixpkgs-unfree;
     };
@@ -45,7 +47,6 @@
         ../../programs/home-manager/lazygit.nix
         ../../programs/home-manager/lazydocker.nix
         ../../programs/home-manager/opencode.nix
-        ../../programs/home-manager/pi.nix
 
         # games
         ../../programs/home-manager/mangohud.nix
@@ -60,9 +61,13 @@
         # utilities
         pkgs.wget
         pkgs.lsof
+        pkgs.pciutils
+        pkgs.inxi
         pkgs.unzip
         pkgs.lm_sensors
         pkgs.microfetch
+
+        # passwords
         pkgs.nordvpn
         pkgs.nordpass
 
@@ -76,12 +81,12 @@
         # ai
         pkgs.llama-cpp-rocm
         (pkgs.stable-diffusion-cpp-rocm.overrideAttrs (oldAttrs: {
-          version = "master-1031-c6dfa9d";
+          version = "master-1053-5a1ba5d";
           src = pkgs.fetchFromGitHub {
             owner = "leejet";
             repo = "stable-diffusion.cpp";
-            rev = "master-1031-c6dfa9d";
-						hash = "sha256-Otbdz72ozWgemtoTOmwu/TuOMTKxcBq7NxgOpJWik+0=";
+            rev = "master-1053-5a1ba5d";
+            hash = "sha256-+6HM+o6CrGHljme4AktzwPPgbFrEkmhAwEz4mBy1OS8=";
             fetchSubmodules = true;
           };
         }))
