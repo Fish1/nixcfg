@@ -41,8 +41,12 @@
         };
       };
     };
-    cli.settings = {
-      theme = "tokyonight";
+    cli = {
+      theme = {
+        name = "tokyonight";
+        mode = "system";
+      };
+      animations = true;
     };
   };
 }
