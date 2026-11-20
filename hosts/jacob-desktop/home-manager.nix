@@ -81,12 +81,12 @@
         # ai
         pkgs.llama-cpp-rocm
         (pkgs.stable-diffusion-cpp-rocm.overrideAttrs (oldAttrs: {
-          version = "master-1053-5a1ba5d";
+          version = "master-1104-5dcfa79";
           src = pkgs.fetchFromGitHub {
             owner = "leejet";
             repo = "stable-diffusion.cpp";
-            rev = "master-1053-5a1ba5d";
-            hash = "sha256-+6HM+o6CrGHljme4AktzwPPgbFrEkmhAwEz4mBy1OS8=";
+            rev = "master-1104-5dcfa79";
+            hash = "sha256-8kHsl8tL+2VVApOC2Gs/zMVpInYUbAnnXhq/C+jSAWo=";
             fetchSubmodules = true;
           };
         }))
@@ -97,6 +97,7 @@
         # art
         pkgs.inkscape
         pkgs.gimp3
+        pkgs.blender
 
         # video
         pkgs.kdePackages.kdenlive
