@@ -166,6 +166,7 @@
           ts_ls.enable = true;
           eslint.enable = true;
           tailwindcss.enable = true;
+          lean3ls.enable = true;
           zls = {
             enable = true;
             packageFallback = true;
