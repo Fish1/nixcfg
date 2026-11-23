@@ -47,7 +47,7 @@
         ../../programs/home-manager/lazygit.nix
         ../../programs/home-manager/lazydocker.nix
         ../../programs/home-manager/antigravity-cli.nix
-        # ../../programs/home-manager/opencode.nix
+        ../../programs/home-manager/opencode.nix
 
         # games
         ../../programs/home-manager/mangohud.nix
